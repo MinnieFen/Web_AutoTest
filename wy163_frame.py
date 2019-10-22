@@ -1,5 +1,6 @@
 # coding:utf-8
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import os
 from time import sleep
 from selenium.webdriver.common.keys import Keys
@@ -118,3 +119,56 @@ d = webdriver.Firefox()
 #     i.click()
 # d.quit()
 
+# 上传文件
+# file_path = 'file://'+os.path.abspath('upload_file.html')
+# d.get(file_path)
+# d.find_element_by_name('file').send_keys(r'C:\Users\cmf\Desktop\test111.doc')
+# sleep(5)
+# d.quit()
+
+# 获取百度输入联想词
+# d.get('https://baidu.com')
+# d.find_element_by_id('kw').send_keys('selenium')
+# sleep(3)
+# eles = d.find_elements_by_css_selector(".bdsug-overflow")
+# print(eles)
+# for i in eles:
+#     print(i.get_attribute('data-key'))
+# if len(eles)>1:
+#     eles[1].click()
+#     print(d.current_url)
+# else:
+#     print("未获取到匹配的词")
+
+# cookie相关操作
+# print(d.get_cookies())
+d.get('http://qiyuebao-t.yunxitech.cn/')
+# print(d.get_cookies())
+# d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').click()
+# d.find_element_by_id('login_span_type_pwd').click()
+# d.find_element_by_id('login_id_input_phone').send_keys('18782038146')
+# d.find_element_by_id('login_id_input_password').send_keys('a123456')
+# d.find_element_by_class_name('ui-checkbox').click()
+# d.find_element_by_id('login_id_login').click()
+# print(d.get_cookies())    # 获取所有cookie
+# print(d.get_cookie(name = 'UM_distinctid'))  # 获取指定name的cookie
+# sleep(1)
+# d.delete_cookie(name='laravel_session')    # 删除指定name的cookie
+# d.delete_all_cookies()     # 删除所有cookie
+# d.refresh()   # 刷新页面
+# 绕过验证码
+# C1 = {'name': 'UM_distinctid',
+#       'value': '16ded3c4aae292-03712fd30c266-4c312373-1fa400-16ded3c4aaf90',
+#       'path': '/',
+#       'domain': '.yunxitech.cn',
+#       'secure': False,
+#       'httpOnly': False,
+#       'expiry': 1587368014}
+# d.add_cookie(C1)
+# d.get('http://qiyuebao-t.yunxitech.cn/')
+# sleep(3)
+# d.refresh()
+
+# 元素定位参数化
+# d.get('https://baidu.com')
+# d.find_element(By.ID,'kw').send_keys('selenium')
