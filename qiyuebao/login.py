@@ -74,5 +74,5 @@ if __name__ == '__main__':
     inputPhone = '18782038146'
     inputPassword = 'a123456'
     Login().login(inputPhone,inputPassword)
-    Login().logout()
+    # Login().logout()
 #     Login().quit()
