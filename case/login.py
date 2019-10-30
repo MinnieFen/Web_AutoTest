@@ -1,78 +1,39 @@
 # coding:utf-8
 from selenium import webdriver
-import os
 from time import sleep
 import unittest
 from selenium.webdriver.common.by import By
+from config import readconfig
+from common.operate_page import BasePage
 
-# d = webdriver.Firefox()
-# d.get('http://qiyuebao-t.yunxitech.cn/')
-# d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').click()
-# d.find_element_by_id('login_span_type_pwd').click()
-# d.find_element_by_id('login_id_input_phone').send_keys('18782038146')
-# d.find_element_by_id('login_id_input_password').send_keys('a123456')
-# d.find_element_by_class_name('ui-checkbox').click()
-# d.find_element_by_id('login_id_login').click()
-
-# def login():
-#     d = webdriver.Firefox()
-#     d.maximize_window()
-#     inputPhone = '18782038146'
-#     inputPassword = 'a123456'
-#     url = 'http://qiyuebao-t.yunxitech.cn/'
-#     d.get(url)
-#     d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').click()
-#     d.find_element_by_id('login_span_type_pwd').click()
-#     d.find_element_by_id('login_id_input_phone').send_keys(inputPhone)
-#     d.find_element_by_id('login_id_input_password').send_keys(inputPassword)
-#     d.find_element_by_class_name('ui-checkbox').click()
-#     d.find_element_by_id('login_id_login').click()
-#     sleep(3)
-#     userName = d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').text
-#     if userName == u'晨曦':
-#         print('登录成功')
-#     else:
-#         print('user name error!')
-#     # 退出
-#     d.find_element_by_class_name('dropdown-toggle').click()
-#     sleep(2)
-#     d.find_element_by_link_text('退出').click()
-# if __name__ == '__main__':
-#     login()
-
-class Login():
-    def __init__(self):
+class Login(unittest.TestCase):
+    def setUp(self):
         self.d = webdriver.Firefox()
-        self.d.maximize_window()
-        # url = 'http://qiyuebao-t.yunxitech.cn/'
-        # self.d.get(url)
-        self.d.implicitly_wait(30)
-        # self.d.quit()
-    def login(self,inputPhone,inputPassword):
-        url = 'http://qiyuebao-t.yunxitech.cn/'
-        self.d.get(url)
-        self.d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').click()
-        self.d.find_element_by_id('login_span_type_pwd').click()
-        self.d.find_element_by_id('login_id_input_phone').send_keys(inputPhone)
-        self.d.find_element_by_id('login_id_input_password').send_keys(inputPassword)
-        self.d.find_element_by_class_name('ui-checkbox').click()
-        self.d.find_element_by_id('login_id_login').click()
-        sleep(3)
-        userName = self.d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').text
-        if userName == u'晨曦':
-            print('登录成功')
-        else:
-            print('user name error!')
-        # self.d.quit()
-    def logout(self):
-        self.d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').click()
-        self.d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/ul/li[4]/a').click()
-    def quit(self):
+    def tearDown(self):
+        userName = self.d.find_element(By.XPATH, '//*[@class = "dropdown-toggle"]').text
+        self.assertEqual(userName, u'晨曦')
         self.d.quit()
+    def test_login1(self):
+        inputPhone = readconfig.inputPhone
+        inputPsw = readconfig.inputPsw
+        url = readconfig.url
+        self.d.get(url)
+        B = BasePage(self.d)
+        # self.d.find_element(By.XPATH,'/html/body/nav/div/div[2]/ul/li[2]/a').click()
+        B.find_web_element(By.XPATH,'/html/body/nav/div/div[2]/ul/li[2]/a').click()
+        # self.d.find_element(By.XPATH,'//*[@id="login_span_type_pwd"]').click()
+        B.find_web_element(By.XPATH,'//*[@id="login_span_type_pwd"]').click()
+        # self.d.find_element(By.XPATH,'// *[@id = "login_id_input_phone"]').send_keys(inputPhone)
+        B.find_web_element(By.XPATH,'// *[@id = "login_id_input_phone"]').send_keys(inputPhone)
+        # self.d.find_element(By.XPATH,'//*[@id ="login_id_input_password"]').send_keys(inputPsw)
+        B.find_web_element(By.XPATH,'//*[@id ="login_id_input_password"]').send_keys(inputPsw)
+        # self.d.find_element(By.XPATH,'//*[@id="login_id_login"]').click()
+        B.find_web_element(By.XPATH,'//*[@id="login_id_login"]').click()
+        sleep(3)
+
 
 if __name__ == '__main__':
-    inputPhone = '18782038146'
-    inputPassword = 'a123456'
-    Login().login(inputPhone,inputPassword)
-    # Login().logout()
-#     Login().quit()
+    suite = unittest.TestSuite()
+    suite.addTest(Login('test_login1'))
+    runner = unittest.TextTestRunner()
+    runner.run(suite)

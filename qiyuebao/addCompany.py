@@ -1,8 +1,7 @@
 # coding:utf-8
 from selenium import webdriver
-import os
 from time import sleep
-from qiyuebao.login import Login
+from case.login import Login
 # d = webdriver.Firefox()
 # d.maximize_window()
 # inputPhone = '18782038146'
