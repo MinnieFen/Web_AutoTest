@@ -1,0 +1,487 @@
+1571882246168	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofileMtaX5W"
+1571882246596	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1571882246596	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1571882246596	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1571882246597	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1571882248527	Marionette	INFO	Listening on port 59309
+1571882248789	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 22812, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 22812, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4788, Chrome_ChildThread] WARNING: pipe erro[Child 18356, Chrome_ChildThread] WARNING: pipe error: 109: frile z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+: 10[9: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child[Parent 22812, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14628, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1571882285818	Marionette	INFO	Stopped listening on port 59309
+[GPU 216
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572317322912	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofiled8ygQv"
+1572317325016	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572317325016	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572317325017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572317325017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[Child 13776, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1572317327377	Marionette	INFO	Listening on port 52468
+1572317327648	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+[Parent 13592, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 13592, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13800, Chrom[Child 9832, Chroeme_ChildThread] WARNING: pipe error: 109:_ file z:/task_1570640083/build/src/ipc/chrCohildThread] WARNING: pipe error: 109: mium/src/chrome/file z:/common/ipc_channel_win.cc, line 341
+task_1570640083/b[uild/src/ipc/chromium/src/chrome/common/i[Parent 13592, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+pc_channel_win.cc, line 341
+[1572317628222	Marionette	INFO	Stopped listening on port 52468
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Marionette	INFO	Listening on port 52744
+1572317522164	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 1396, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 1396, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9552, Chrome_Child[Child 4904, Chrome_ChildThread] WARNING: pipe erTror: 109: file z:/task_1570640083/build/src/ipc/chromium/hsrc/chrome/common/ipc_channel_win.cc, line 341
+read[C] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chil[Parent 1396, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10188, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10188,1572317610423	Marionette	INFO	Stopped listening on port 52744
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572317633195	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofileGH57Ny"
+1572317633618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572317633618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572317633618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572317633618	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572317635164	Marionette	INFO	Listening on port 52900
+1572317635211	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+[[Child 4512, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4512, Ch[Parent 5248, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chil1572317908933	Marionette	INFO	Stopped listening on port 52900
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572317737775	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572317739389	Marionette	INFO	Listening on port 53044
+1572317739484	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+JavaScript error: , line 0: uncaught exception: Error: Error parsing mappings (code 1): the mappings contained a negative line, column, source index, or name index
+[Parent 13804, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3092, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_[Child 14656, Chrome_ChildThread] WARNING: pipe error: 109: file z:/ta1570sk_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+6400[83/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child[Parent 13804, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Childconsole.error: (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.jsm", 683))
+1572317908241	Marionette	INFO	Stopped listening on port 53044
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 624
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 14828, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10300, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10[Parent 14828, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572317907131	Marionette	INFO	Stopped listening on port 53135
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 41
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572317914368	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofileSiQFTW"
+1572317914800	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572317914800	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572317914800	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572317914800	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572317916328	Marionette	INFO	Listening on port 53284
+1572317916381	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[Parent 13720, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 13720, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7284, Chrome_ChildThread] WARNING: pipe error: 1[Child 3216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc,0 line 341
+9: f[ile z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7284, Chrome_ChildThread[Parent 13720, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1532, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child1572335883380	Marionette	INFO	Stopped listening on port 53284
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ine 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+[Parent 5768, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5768, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9816, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi[Child 3268, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child[Parent 5768, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1572333516180	Marionette	INFO	Stopped listening on port 62650
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GP
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572333519980	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofile8zm5LV"
+1572333520407	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572333520407	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572333520407	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572333520407	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572333521941	Marionette	INFO	Listening on port 62738
+1572333521994	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 9308, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 9308, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 101[5C6h,ild 1796, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc _Chrome_ChildThread] WARNING: pipe ercror: 109: file z:/task_15h7annel_win.cc, line 341
+064008[3/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[[Parent 9308, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2944, Chrome_Chi1572333568047	Marionette	INFO	Stopped listening on port 62738
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[G
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572333572324	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofileHTxGum"
+1572333572749	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572333572749	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572333572749	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572333572749	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572333574300	Marionette	INFO	Listening on port 62831
+1572333574336	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 11108, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11108, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8272, Chrome_ChildThread] WA[Child 12248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_157RNING: pipe error: 109: file z:/task_1570640083/0build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[C[Parent 11108, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6580, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1572333599971	Marionette	INFO	Stopped listening on port 62831
+[GPU 4
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572333696518	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofile0gryPz"
+1572333696934	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572333696935	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572333696935	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572333696935	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572333698554	Marionette	INFO	Listening on port 62967
+1572333698634	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 15148, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12292, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12292, Chrome_C[Parent 15148, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 124, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 124, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 15148, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12724, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1572333717127	Marionette	INFO	Stopped listening on port 62967
+[GPU 9
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572335349953	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofilejwgo7t"
+1572335350401	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572335350401	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572335350401	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572335350401	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572335352165	Marionette	INFO	Listening on port 64068
+1572335352570	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 11588, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11588, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12128, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/[Child 5772, Chrome_ChildThreachrome/common/ipc_channel_win.cc, line 341
+d][Ch WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chil[Parent 11588, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12620, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1572335376305	Marionette	INFO	Stopped listening on port 64068
+[GPU 2
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572335436473	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofileszeNux"
+1572335436889	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572335436889	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572335436889	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572335436889	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572335438425	Marionette	INFO	Listening on port 64186
+1572335438485	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 12428, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_[1Parent 5948, Gecko_IOThread] WARNING: pipe error: 109: fil5706e z:/task_140083/build/5src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+70640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6284, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6284, C[Parent 5948, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12292, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1572335468724	Marionette	INFO	Stopped listening on port 64186
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572335888323	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofilezgkEjs"
+1572335888743	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572335888743	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572335888743	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572335888743	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572335890283	Marionette	INFO	Listening on port 64576
+1572335890334	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 4284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14184, Chrome_ChildThread] WARNING: pi[Child pe er11064, Chrome_ChildThread] WARror: 109: file z:/NING: ptask_1570640083/ipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chil[Parent 4284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12620, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1572335915668	Marionette	INFO	Stopped listening on port 64576
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 12
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572336171208	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofile5YzorH"
+1572336171623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572336171623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572336171623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572336171623	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572336173196	Marionette	INFO	Listening on port 64789
+1572336173217	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 10984, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 10984, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15228, Chrome_ChildThread] WARNING: pipe error: 109: fi[le z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, lChild 13ine 341
+092, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Parent 10984, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10088, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10088, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572336434457	Marionette	INFO	Stopped listening on port 64789
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572336438999	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofileKQS5N6"
+1572336439429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572336439429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572336439430	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572336439430	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572336440997	Marionette	INFO	Listening on port 65238
+1572336441011	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 608, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9556, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 608, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4360, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4360, Ch[Parent 608, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572336941331	Marionette	INFO	Stopped listening on port 65238
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 2
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572336953382	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofiler1IFYo"
+1572336953803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572336953803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572336953803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572336953803	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572336955392	Marionette	INFO	Listening on port 49312
+1572336955494	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Parent 4500, Gecko_IOThread] WARNING: file z:/task_1570640083/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14956, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1495[Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child [Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9576, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 95[Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7472, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7[Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 4500, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4600, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_wi[Child 4980, Chron.cc, line 341
+[mChe_ChildThreaild 6716, Chrdome_ChildThread]] WARNING: p WARNING: pipe erripe[Parent 450 o0, erGeck:ro_IOThre 109:ad] WARNING: pipe error: 109: filer file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+ z:/tasor: 1[k_1570640083/0buil9d/src/ipc: fi/chromium/src/chrome/common/ipc_channleel_win.cc, line 341
+ [Child 8572, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chz:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1572402202712	Marionette	INFO	Stopped listening on port 49312
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13352, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chil1572342357863	Marionette	INFO	Stopped listening on port 53873
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 147
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+72342315353	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572342317053	Marionette	INFO	Listening on port 53944
+1572342317523	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 6476, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6476, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1[Child 15648, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/c5hromium/src/chrome/common/ipc_channel_wi7n7.6c,c ,C hlrionmee 341
+_[ChildChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15592, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Chi1572342356841	Marionette	INFO	Stopped listening on port 53944
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 1
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572342363727	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofile3woNWN"
+1572342364159	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572342364159	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572342364159	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572342364159	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572342365752	Marionette	INFO	Listening on port 54011
+1572342365840	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 12412, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15788, Chrome_ChildThread] WARNING:[Parent 12412, Gecko_IOThre pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+ad] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15960, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15960, Ch[Parent 12412, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1572342382858	Marionette	INFO	Stopped listening on port 54011
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1572402095981	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\yunxi123\\AppData\\Local\\Temp\\rust_mozprofileyMYKsl"
+1572402096427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572402096427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572402096427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572402096427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1572402098100	Marionette	INFO	Listening on port 58286
+1572402098594	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 10024, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15816, Chrome_ChildThread] WARNING: pipe error: 109: file z:/ta[Child 13924, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/sk_1570640083/build/src/ipc/chromiumch/romsrc/chromeium/src/chr/common/ipc_channel_win.coc, line 341
+me/common/ipc_channel_win.cc, line 341
+[Child 1[Parent 10024, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3796, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1570640083/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3796, Chrome_ChildTh1572402201909	Marionette	INFO	Stopped listening on port 58286
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 1
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
