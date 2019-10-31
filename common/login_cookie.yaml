@@ -1,0 +1,7 @@
+domain: qiyuebao-t.yunxitech.cn
+expiry: 1573135124.119447
+httpOnly: true
+name: laravel_session
+path: /
+secure: false
+value: DsRq8tn1Z6k1mpB9yMsVEiaaikGebQlGJEFhSwyH
