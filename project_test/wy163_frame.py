@@ -142,7 +142,7 @@ d = webdriver.Firefox()
 
 # cookie相关操作
 # print(d.get_cookies())
-d.get('http://qiyuebao-t.yunxitech.cn/')
+# d.get('http://qiyuebao-t.yunxitech.cn/')
 # print(d.get_cookies())
 # d.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').click()
 # d.find_element_by_id('login_span_type_pwd').click()
@@ -156,18 +156,24 @@ d.get('http://qiyuebao-t.yunxitech.cn/')
 # d.delete_cookie(name='laravel_session')    # 删除指定name的cookie
 # d.delete_all_cookies()     # 删除所有cookie
 # d.refresh()   # 刷新页面
+
 # 绕过验证码
-# C1 = {'name': 'UM_distinctid',
-#       'value': '16ded3c4aae292-03712fd30c266-4c312373-1fa400-16ded3c4aaf90',
-#       'path': '/',
-#       'domain': '.yunxitech.cn',
-#       'secure': False,
-#       'httpOnly': False,
-#       'expiry': 1587368014}
-# d.add_cookie(C1)
+d.get('http://qiyuebao-t.yunxitech.cn/')
+C1 = {'name': '_gat_gtag_UA_143117345_1', 'value': '1', 'path': '/', 'domain': '.yunxitech.cn', 'secure': False, 'httpOnly': False, 'expiry': 1572514716}
+C2 = {'name': 'UM_distinctid', 'value': '16e212d715bc5-02d2a1244301f6-4c302b7a-1fa400-16e212d715c566', 'path': '/', 'domain': '.yunxitech.cn', 'secure': False, 'httpOnly': False, 'expiry': 1588239456}
+C3 = {'name': 'laravel_session', 'value': 'vCTv7UtsVHoBxBJxWShWQXJ7nKRMRKj9TbNVqs4p', 'path': '/', 'domain': 'qiyuebao-t.yunxitech.cn', 'secure': False, 'httpOnly': True, 'expiry': 1573120014}
+C4 = {'name': '_ga', 'value': 'GA1.2.697525530.1572514657', 'path': '/', 'domain': '.yunxitech.cn', 'secure': False, 'httpOnly': False, 'expiry': 1635586658}
+C5 = {'name': '_gid', 'value': 'GA1.2.827195003.1572514657', 'path': '/', 'domain': '.yunxitech.cn', 'secure': False, 'httpOnly': False, 'expiry': 1572601058}
+C6 = {'name': 'CNZZDATA1277663062', 'value': '1914157506-1572514597-%7C1572514597', 'path': '/', 'domain': 'qiyuebao-t.yunxitech.cn', 'secure': False, 'httpOnly': False, 'expiry': 1588239458}
 # d.get('http://qiyuebao-t.yunxitech.cn/')
-# sleep(3)
-# d.refresh()
+d.add_cookie(C1)
+d.add_cookie(C2)
+d.add_cookie(C3)
+d.add_cookie(C4)
+d.add_cookie(C5)
+d.add_cookie(C6)
+d.get('http://qiyuebao-t.yunxitech.cn/')
+
 
 # 元素定位参数化
 # d.get('https://baidu.com')

@@ -1,5 +1,6 @@
 # coding:utf-8
 import xlrd
+import os
 
 class ReadExcel(object):
     def __init__(self,excelpath,sheetname):
