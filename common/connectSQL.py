@@ -14,25 +14,38 @@ from config import readconfig
 # print(result)
 # db.close()    # 关闭数据库连接
 
-sql_info = {'host':'rm-2ze034s22kk79pys5o.mysql.rds.aliyuncs.com',
-            'user':'cdtest',
-            'port':3336,
-            'password':'uIkKCZgNay',
-            'db':'yxtestdev4',
-            'charset':'utf8'}
+# sql_info = {'host':'rm-2ze034s22kk79pys5o.mysql.rds.aliyuncs.com',
+#             'user':'cdtest',
+#             'port':3336,
+#             'password':'uIkKCZgNay',
+#             'db':'yxtestdev4',
+#             'charset':'utf8'}
 class MySQLUtil():
     def __init__(self):
-        self.db_info = sql_info
-        self.db = MySQLUtil.__getconnect(self.db_info)
-    @staticmethod
-    def __getconnect(db_info):
+        self.db = db
+        # self.db_info = sql_info
+        # self.db = MySQLUtil.__getconnect(self.db_info)
+    # @staticmethod
+    # def __getconnect(db_info):
+    #     try:
+    #         db = MySQLdb.connect(host = db_info['host'],
+    #                             user = db_info['user'],
+    #                             port = db_info['port'],
+    #                             password = db_info['password'],
+    #                             db = db_info['db'],
+    #                             charset = db_info['charset'])
+    #         return db
+    #     except Exception as a:
+    #         print('数据库连接异常：%s' %a)
+    def get_connect(self):
+        host = readconfig.sql_host
+        user = readconfig.sql_uer
+        port = readconfig.sql_port
+        password = readconfig.sql_password
+        db_qiyuebao = readconfig.sql_db_qiyuebao
+        charset = readconfig.sql_charset
         try:
-            db = MySQLdb.connect(host = db_info['host'],
-                                user = db_info['user'],
-                                port = db_info['port'],
-                                password = db_info['password'],
-                                db = db_info['db'],
-                                charset = db_info['charset'])
+            db = MySQLdb.connect(host = host,user = user,port = port,password = password,db = db_qiyuebao,charset= charset)
             return db
         except Exception as a:
             print('数据库连接异常：%s' %a)

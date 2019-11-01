@@ -4,12 +4,14 @@ from time import sleep
 import unittest
 from selenium.webdriver.common.by import By
 from config import readconfig
-from common.operate_page import BasePage
 from common import get_exceldata
+from common.operate_page import BasePage
+
+
 class Login(unittest.TestCase):
     def setUp(self):
         self.d = webdriver.Chrome()
-        url = readconfig.url
+        url = readconfig.url_login
         self.d.get(url)
         self.B = BasePage(self.d)
         self.B.max_window()
@@ -24,23 +26,17 @@ class Login(unittest.TestCase):
         pass
 # 封装元素操作方法
     def test_login1(self):
-        inputPhone = readconfig.inputPhone
-        inputPsw = readconfig.inputPsw
+        inputPhone = readconfig.inputPhone_login
+        inputPsw = readconfig.inputPsw_login
         # B = BasePage(self.d)
-        ele1 = (By.XPATH,self.data1)
-        ele2 = (By.XPATH,self.data2)
-        ele3 = (By.XPATH,self.data3)
-        ele4 = (By.XPATH,self.data4)
-        ele5 = (By.XPATH,self.data5)
-        ele6 = (By.XPATH, self.data6)
-        self.B.click_btn(*ele1)
-        self.B.click_btn(*ele2)
-        self.B.send_word(inputPhone,*ele3)
-        self.B.send_word(inputPsw,*ele4)
-        self.B.click_btn(*ele5)
+        self.B.click_btn(By.XPATH,self.data1)
+        self.B.click_btn(By.XPATH,self.data2)
+        self.B.send_word(inputPhone,By.XPATH,self.data3)
+        self.B.send_word(inputPsw,By.XPATH,self.data4)
+        self.B.click_btn(By.XPATH,self.data5)
         sleep(3)
-        userName = self.B.get_text(*ele6)
-        self.assertEqual(userName, u'晨曦')
+        userName = self.B.get_text(By.XPATH, self.data6)
+        self.assertEqual(userName, u'陈嘻嘻')
         self.d.get_cookie(name = 'laravel_session')
         self.d.quit()
 

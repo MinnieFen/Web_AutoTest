@@ -19,6 +19,14 @@ class BasePage():
 # 获取元素文本内容
     def get_text(self,*loc):
         return self.d.find_element(*loc).text
+# 清空输入框
+    def clear_word(self,*loc):
+        return self.d.find_element(*loc).clear()
+# 元素聚焦
+    def ele_target(self,*loc):
+        target = self.d.find_element(*loc)
+        return self.d.excute_script("arguments[0].scrollIntoView();",target)
+
 
 # if __name__ == '__main__':
 #     url = 'http://qiyuebao-t.yunxitech.cn/'

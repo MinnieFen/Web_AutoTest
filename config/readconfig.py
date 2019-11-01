@@ -12,18 +12,22 @@ sql_host = conf.get('sql_info','host')
 sql_uer = conf.get('sql_info','user')
 sql_port = conf.get('sql_info','port')
 sql_password = conf.get('sql_info','password')
-sql_db = conf.get('sql_info','db')
+sql_db_yx = conf.get('sql_info','db_yx')
+sql_db_qiyuebao = conf.get('sql_info','db_qiyuebao')
 sql_charset = conf.get('sql_info','charset')
 
 # 读取浏览器配置
 browserName = conf.get('browserType','browserName')
 
 # 读取测试url
-url = conf.get('testServer','url')
+url_login = conf.get('testServer','url_login')
+url_admin = conf.get('testServer','url_admin')
 
 # 读取登录账号、密码
-inputPhone = conf.get('user_info','inputPhone')
-inputPsw = conf.get('user_info','inputPsw')
+inputPhone_cookie = conf.get('user_info','inputPhone_cookie')
+inputPsw_cookie = conf.get('user_info','inputPsw_cookie')
+inputPhone_login = conf.get('user_info','inputPhone_login')
+inputPsw_login = conf.get('user_info','inputPsw_login')
 
 # 读取email
 mail_host = conf.get('email','mail_host')

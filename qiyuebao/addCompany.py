@@ -1,7 +1,7 @@
 # coding:utf-8
 from selenium import webdriver
 from time import sleep
-from case.login import Login
+from common.login_cookie import Login
 # d = webdriver.Firefox()
 # d.maximize_window()
 # inputPhone = '18782038146'
@@ -36,7 +36,7 @@ class addCom():
     def __init__(self):
         self.dv = webdriver.Firefox()
     def add_com(self,companyName):
-        Login().login(inputPhone,inputPassword)
+        Login().test_login()
         self.dv.find_element_by_xpath('/html/body/nav/div/div[2]/ul/li[2]/a').click()
         self.dv.find_element_by_link_text('我的账户').click()
         sleep(3)
