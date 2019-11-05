@@ -44,6 +44,41 @@ class Login(object):
             yaml.dump(cookie_value,f,Dumper=yaml.RoundTripDumper)
         self.d.delete_cookie(name='laravel_session')
         self.d.quit()
+# 数据分离
+#     def test_login1(self):
+#         inputPhone = readconfig.inputPhone
+#         inputPsw = readconfig.inputPsw
+#         # B = BasePage(self.d)
+#         ele1 = (By.XPATH,self.data1)
+#         ele2 = (By.XPATH,self.data2)
+#         ele3 = (By.XPATH,self.data3)
+#         ele4 = (By.XPATH,self.data4)
+#         ele5 = (By.XPATH,self.data5)
+#         ele6 = (By.XPATH, self.data6)
+#         self.B.find_web_element(*ele1).click()
+#         self.B.find_web_element(*ele2).click()
+#         self.B.find_web_element(*ele3).send_keys(inputPhone)
+#         self.B.find_web_element(*ele4).send_keys(inputPsw)
+#         self.B.find_web_element(*ele5).click()
+#         sleep(3)
+#         userName = self.B.find_web_element(*ele6).text
+#         self.assertEqual(userName, u'晨曦')
+#         self.d.quit()
 
+    # def test_login1(self):
+    #     inputPhone = readconfig.inputPhone
+    #     inputPsw = readconfig.inputPsw
+    #     B = BasePage(self.d)
+    #     ele1 = (By.XPATH,'/html/body/nav/div/div[2]/ul/li[2]/a')
+    #     ele2 = (By.XPATH,'//*[@id="login_span_type_pwd"]')
+    #     ele3 =(By.XPATH,'// *[@id = "login_id_input_phone"]')
+    #     ele4 = (By.XPATH,'//*[@id ="login_id_input_password"]')
+    #     ele5 = (By.XPATH,'//*[@id="login_id_login"]')
+    #     B.find_web_element(*ele1).click()
+    #     B.find_web_element(*ele2).click()
+    #     B.find_web_element(*ele3).send_keys(inputPhone)
+    #     B.find_web_element(*ele4).send_keys(inputPsw)
+    #     B.find_web_element(*ele5).click()
+    #     sleep(3)
 if __name__ == '__main__':
     Login().test_login()

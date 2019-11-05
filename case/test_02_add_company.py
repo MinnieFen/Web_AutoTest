@@ -8,6 +8,7 @@ from config import readconfig
 from common.operate_page import BasePage
 from common import get_exceldata
 from time import sleep
+from common.SQLconnect import MySQLUtil
 class Add_company(unittest.TestCase):
     def setUp(self):
         self.d = webdriver.Firefox()
@@ -28,9 +29,16 @@ class Add_company(unittest.TestCase):
         self.data6 = add_data[5]['elements']
         self.data7 = add_data[6]['elements']
         sleep(3)
+    def tearDown(self):
+        mysql = MySQLUtil()
+        sql = '''DELETE
+        FROM com_user_relation 
+        WHERE NAME = "金控集团"'''
+        mysql.get_execute(sql)
+        mysql.mysql_close()
 # 添加不存在的公司
     def test_01_add_company(self):
-        companyName = "金控集团3333333"
+        companyName = "金控集团"
         # self.B.click_btn(By.XPATH,self.data6)
         # self.B.click_btn(By.XPATH,self.data7)
         self.B.click_btn(By.XPATH,self.data1)
@@ -41,7 +49,7 @@ class Add_company(unittest.TestCase):
         company_now = self.B.get_text(By.XPATH,self.data1)
         self.assertEqual(company_now,companyName)
     def test_02_add_company(self):
-        companyName = "金控集团333"
+        companyName = "金控集团"
         self.B.click_btn(By.XPATH, self.data1)
         self.B.click_btn(By.XPATH, self.data2)
         self.B.send_word(companyName, By.XPATH, self.data3)

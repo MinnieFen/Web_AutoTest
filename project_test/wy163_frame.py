@@ -156,14 +156,14 @@ d = webdriver.Firefox()
 # d.refresh()   # 刷新页面
 
 # 绕过验证码
-from common import get_yamldata
-cookievalue = get_yamldata.get_cookie()
-print(cookievalue)
-C3 = cookievalue
+# from common import get_yamldata
+# cookievalue = get_yamldata.get_cookie()
+# print(cookievalue)
+# C3 = cookievalue
 # C3 = {'name': 'laravel_session', 'value': 'I8RgJzmkHpK1JRQxwkq56P3rhPRvOLu1Y3Mdm2P6'}
-d.get('http://qiyuebao-t.yunxitech.cn/admin?id=1&lg=0')
-d.add_cookie(C3)
-d.get('http://qiyuebao-t.yunxitech.cn/admin?id=1&lg=0')
+# d.get('http://qiyuebao-t.yunxitech.cn/admin?id=1&lg=0')
+# d.add_cookie(C3)
+# d.get('http://qiyuebao-t.yunxitech.cn/admin?id=1&lg=0')
 # sleep(4)
 # d.quit()
 # 元素定位参数化
