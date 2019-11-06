@@ -3,8 +3,8 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from config import readconfig
-from common.operate_page import BasePage
-from common import get_exceldata
+from Base.operate_page import BasePage
+from Base import get_exceldata
 from ruamel import yaml
 import os
 class Login(object):

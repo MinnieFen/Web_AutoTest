@@ -17,7 +17,7 @@ class MySQLUtil():
         # self.dbb = readconfig.sql_db_yx
         # self.charset = readconfig.sql_charset
         self.conn = MySQLUtil.__connect(self.sql_info)
-    @staticmethod
+    @staticmethod    # 声明静态方法，调用该函数时不需要实例化
     def __connect(sql_info):
         try:
             # conn = MySQLdb.connect(host = self.host,
@@ -48,6 +48,7 @@ class MySQLUtil():
             cursor.close()
             # MySQLUtil().connect().commit()
             self.conn.commit()
+
     def get_rows(self,sql):
         # cursor = MySQLUtil().connect().cursor()
         cursor = self.conn.cursor()
@@ -60,7 +61,6 @@ class MySQLUtil():
             self.conn.commit()
             rows = cursor.fetchall()
             cursor.close()
-            print(rows)
             return rows
     def mysql_close(self):
         try:
@@ -68,15 +68,12 @@ class MySQLUtil():
             self.conn.close()
         except Exception as a:
             print('关闭数据库异常：%s' %a)
-# if __name__ == '__main__':
-#     mysql = MySQLUtil()
-#     sql = '''SELECT
-# o.UUID_REQ_OBJECT,o.OBJ_USE_MODE,o.OBJ_NAME,o.MY_COM_NAME,o.CONTRACT_NAME,o.USED_COUNT,o.OBJ_USE_STATUS,o.PARTY_TYPE,o.VERIFY_COUNT
-# FROM sta_req_object AS o
-# WHERE o.OBJ_NAME LIKE '%湖南公司'
-# AND o.OBJ_USE_STATUS = 3
-# ORDER BY o.CTIME'''
-#     mysql.connect()
-#     mysql.get_execute(sql)
-#     mysql.get_rows(sql)
-#     mysql.mysql_close()
+if __name__ == '__main__':
+    mysql = MySQLUtil()
+    sql = '''SELECT `CODE` from sms_code_record WHERE PHONE = '18782038146' ORDER BY CTIME DESC'''
+    mysql.get_execute(sql)
+    codes = mysql.get_rows(sql)
+    print(codes)
+    print(type(codes))
+    print(codes[0])
+    mysql.mysql_close()

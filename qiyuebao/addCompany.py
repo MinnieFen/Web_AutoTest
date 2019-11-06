@@ -1,7 +1,7 @@
 # coding:utf-8
 from selenium import webdriver
 from time import sleep
-from common.login_cookie import Login
+from Base.login_cookie import Login
 # d = webdriver.Firefox()
 # d.maximize_window()
 # inputPhone = '18782038146'

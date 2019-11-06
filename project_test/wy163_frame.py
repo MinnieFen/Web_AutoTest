@@ -156,7 +156,7 @@ d = webdriver.Firefox()
 # d.refresh()   # 刷新页面
 
 # 绕过验证码
-# from common import get_yamldata
+# from Base import get_yamldata
 # cookievalue = get_yamldata.get_cookie()
 # print(cookievalue)
 # C3 = cookievalue

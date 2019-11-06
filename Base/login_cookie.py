@@ -3,8 +3,8 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from config import readconfig
-from common import get_exceldata
-from common.operate_page import BasePage
+from Base import get_exceldata
+from Base.operate_page import BasePage
 from ruamel import yaml
 import os
 class Login(object):
@@ -37,15 +37,15 @@ class Login(object):
         self.B.send_word(inputPsw,*ele4)
         self.B.click_btn(*ele5)
         sleep(3)
-        login_cookie = self.d.get_cookie(name = 'laravel_session')
-        yamlpath = os.path.abspath(os.path.dirname(__file__)) + '\login_cookie.yaml'
-        cookie_value = login_cookie
-        with open(yamlpath,'w',encoding='utf-8') as f:
-            yaml.dump(cookie_value,f,Dumper=yaml.RoundTripDumper)
-        # self.d.delete_cookie(name = 'laravel_session')
-        # self.d.refresh()
-        sleep(3)
-        self.d.quit()
+        # login_cookie = self.d.get_cookie(name = 'laravel_session')
+        # yamlpath = os.path.abspath(os.path.dirname(__file__)) + '\login_cookie.yaml'
+        # cookie_value = login_cookie
+        # with open(yamlpath,'w',encoding='utf-8') as f:
+        #     yaml.dump(cookie_value,f,Dumper=yaml.RoundTripDumper)
+        # # self.d.delete_cookie(name = 'laravel_session')
+        # # self.d.refresh()
+        # sleep(3)
+        # self.d.quit()
 
 # 保存登录cookie
 #     def save_cookie(self):
