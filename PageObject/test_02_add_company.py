@@ -2,11 +2,11 @@
 from selenium import webdriver
 import unittest
 from selenium.webdriver.common.by import By
-from Base.login_cookie import Login
-from Base import get_yamldata
+from Base.SaveLoginCookie import Login
+from Base import GetYamlData
 from config import readconfig
 from Base.BasePage import BasePage
-from Base import get_exceldata
+from Base import GetExcelData
 from time import sleep
 from Base.SQLconnect import MySQLUtil
 class Add_company(unittest.TestCase):
@@ -17,13 +17,13 @@ class Add_company(unittest.TestCase):
         # self.d = webdriver.Firefox()
         # Login().test_login()
         # Login().save_cookie()
-        cookie_value = get_yamldata.get_cookie()
+        cookie_value = GetYamlData.get_cookie()
         url = readconfig.url_admin
         self.d.get(url)
         self.d.add_cookie(cookie_value)
         self.d.get(url)
         self.B = BasePage(self.d)
-        add_data = get_exceldata.get_excel_data('addcompany')
+        add_data = GetExcelData.get_excel_data('addcompany')
         self.data1 = add_data[0]['elements']
         self.data2 = add_data[1]['elements']
         self.data3 = add_data[2]['elements']
@@ -32,15 +32,15 @@ class Add_company(unittest.TestCase):
         self.data6 = add_data[5]['elements']
         self.data7 = add_data[6]['elements']
 
-    @classmethod
-    def tearDownClass(cls):
-        mysql = MySQLUtil()
-        sql = '''DELETE
-        FROM com_user_relation
-        WHERE NAME = "金控集团"'''
-        mysql.get_execute(sql)
-        mysql.mysql_close()
-        cls.d.quit()
+    # @classmethod
+    # def tearDownClass(cls):
+    #     mysql = MySQLUtil()
+    #     sql = '''DELETE
+    #     FROM com_user_relation
+    #     WHERE NAME = "金控集团"'''
+    #     mysql.get_execute(sql)
+    #     mysql.mysql_close()
+    #     cls.d.quit()
 # 添加不存在的公司
     def test_01_add_company(self):
         companyName = "金控集团"

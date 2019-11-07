@@ -4,7 +4,7 @@ from time import sleep
 from selenium.webdriver.common.by import By
 from config import readconfig
 from Base.BasePage import BasePage
-from Base import get_exceldata
+from Base import GetExcelData
 from ruamel import yaml
 import os
 class Login(object):
@@ -14,7 +14,7 @@ class Login(object):
         self.d.get(url)
         self.B = BasePage(self.d)
         self.B.max_window()
-        getdata = get_exceldata.get_excel_data('loginpage')
+        getdata = GetExcelData.get_excel_data('loginpage')
         self.data1 = getdata[0]['elements']
         self.data2 = getdata[1]['elements']
         self.data3 = getdata[2]['elements']

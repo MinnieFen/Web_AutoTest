@@ -3,7 +3,7 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from config import readconfig
-from Base import get_exceldata
+from Base import GetExcelData
 from Base.BasePage import BasePage
 from Base.SQLconnect import MySQLUtil
 from PageElements.LoginPageElements import login_elements

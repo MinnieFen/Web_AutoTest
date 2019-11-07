@@ -1,7 +1,7 @@
 # coding:utf-8
 import unittest
 from PageObject.LoginPageObject import Login
-from Base.get_exceldata import get_excel_data
+from Base.GetExcelData import get_excel_data
 from Base.MyUnit import MyTest
 from config import readconfig
 
@@ -36,8 +36,8 @@ class Test_login(MyTest):
 if __name__ == '__main__':
     suite = unittest.TestSuite()
     suite.addTest(Test_login('test_login_01'))
-    suite.addTest(Test_login('test_login_02'))
-    suite.addTest(Test_login('test_login_03'))
-    suite.addTest(Test_login('test_login_04'))
-    suite.addTest(Test_login('test_login_05'))
+    # suite.addTest(Test_login('test_login_02'))
+    # suite.addTest(Test_login('test_login_03'))
+    # suite.addTest(Test_login('test_login_04'))
+    # suite.addTest(Test_login('test_login_05'))
     unittest.TextTestRunner().run(suite)

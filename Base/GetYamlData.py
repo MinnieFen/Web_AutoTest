@@ -16,4 +16,4 @@ def get_cookie(yamlName = "login_cookie.yaml"):
     cookie_data_dict = {'name':cookie_name,'value':cookie_value}
     print(cookie_data_dict)
     return cookie_data_dict
-get_cookie()
+# get_cookie()
