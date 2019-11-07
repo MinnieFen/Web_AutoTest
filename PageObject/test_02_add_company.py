@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from Base.login_cookie import Login
 from Base import get_yamldata
 from config import readconfig
-from Base.operate_page import BasePage
+from Base.BasePage import BasePage
 from Base import get_exceldata
 from time import sleep
 from Base.SQLconnect import MySQLUtil

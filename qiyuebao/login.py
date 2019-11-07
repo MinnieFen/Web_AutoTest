@@ -3,14 +3,14 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from config import readconfig
-from Base.operate_page import BasePage
+from Base.BasePage import BasePage
 from Base import get_exceldata
 from ruamel import yaml
 import os
 class Login(object):
     def __init__(self):
         self.d = webdriver.Chrome()
-        url = readconfig.url
+        url = readconfig.url_login
         self.d.get(url)
         self.B = BasePage(self.d)
         self.B.max_window()
@@ -23,8 +23,8 @@ class Login(object):
         self.data6 = getdata[5]['elements']
 # 封装元素操作方法
     def test_login(self):
-        inputPhone = readconfig.inputPhone
-        inputPsw = readconfig.inputPsw
+        inputPhone = readconfig.inputPhone_cookie
+        inputPsw = readconfig.inputPsw_cookie
         # B = BasePage(self.d)
         ele1 = (By.XPATH,self.data1)
         ele2 = (By.XPATH,self.data2)

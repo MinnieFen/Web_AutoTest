@@ -4,50 +4,56 @@ from time import sleep
 from selenium.webdriver.common.by import By
 from config import readconfig
 from Base import get_exceldata
-from Base.operate_page import BasePage
+from Base.BasePage import BasePage
 from Base.SQLconnect import MySQLUtil
 from PageElements.LoginPageElements import login_elements
-class Login(object):
-    def __init__(self):
-        self.d = webdriver.Firefox()
-        url = readconfig.url_login
-        self.d.get(url)
-        self.B = BasePage(self.d)
-        self.B.max_window()
-        self.getdata = get_exceldata.get_excel_data('loginpage')
-        self.data0 = self.getdata[0]['elements']    # 跳转到登录页面元素
-        self.data1 = self.getdata[1]['elements']    # 切换密码登录元素
-        self.data2 = self.getdata[2]['elements']    # 输入手机号
-        self.data3 = self.getdata[3]['elements']    # 输入密码/验证码
-        self.data4 = self.getdata[4]['elements']    # 确定登录/确定重置密码
-        self.data5 = self.getdata[5]['elements']    # 登录成功header显示的用户名
-        self.data6 = self.getdata[6]['elements']    # 点击获取验证码
-        self.data7 = self.getdata[7]['elements']    # 点击忘记密码
-        self.data8 = self.getdata[8]['elements']    # 输入新密码
-        self.data9 = self.getdata[9]['elements']    # 跳转到注册页面
-        self.data10 = self.getdata[10]['elements']  # 输入注册手机号
-        self.data11 = self.getdata[11]['elements']  # 输入注册密码
-        self.data12 = self.getdata[12]['elements']  # 输入注册用户名
-        self.data13 = self.getdata[13]['elements']  # 点击注册获取验证码
-        self.data14 = self.getdata[14]['elements']  # 输入注册验证码
-        self.data15 = self.getdata[15]['elements']  # 勾选同意服务协议框
-        self.data16 = self.getdata[16]['elements']  # 确定注册按钮
-        self.data17 = self.getdata[17]['elements']  # 返回首页
-        self.data18 = self.getdata[18]['elements']  # 点击退出按钮
-        self.new_psw = get_exceldata.get_excel_data('new_pswData')  # 读取新密码
-        self.register_data = get_exceldata.get_excel_data('register')   # 读取注册账号信息
-# 密码登录
-    def psw_login(self):
-        inputPhone = readconfig.inputPhone_login
-        inputPsw = readconfig.inputPsw_login
-        a = login_elements()[0]
-        self.B.click_btn(By.XPATH,a)
-        # self.B.click_btn(By.XPATH,self.data0)
-        self.B.click_btn(By.XPATH, self.data1)
-        self.B.send_word(inputPhone, By.XPATH, self.data2)
-        self.B.send_word(inputPsw, By.XPATH, self.data3)
-        self.B.click_btn(By.XPATH, self.data4)
-        sleep(5)
+from Base.DriverBase import start_driver
+class Login(BasePage):
+    # def __init__(self):
+    #     self.d = start_driver()
+    #     # url = readconfig.url_login
+    #     # self.d.get(url)
+    #     self.B = BasePage(self.d)
+    # 打开页面
+    # def open_page(self):
+    #     self.url = readconfig.url_login
+    #     self.open_url(self.url)
+    # 跳转到登录页面
+    def login_page(self):
+        self.click_btn(*(login_elements()[0]))
+    # 切换密码登录
+    def psw_login_page(self):
+        self.click_btn(*(login_elements()[1]))
+    # 登录手机号
+    def login_phone(self,inputPhone):
+        self.clear_word(*(login_elements()[2]))
+        self.send_word(inputPhone,*(login_elements()[2]))
+    # 登录密码
+    def login_psw(self,inputPsw):
+        self.clear_word(*(login_elements()[3]))
+        self.send_word(inputPsw,*(login_elements()[3]))
+    # 确定登录按钮
+    def login_button(self):
+        self.click_btn(*(login_elements()[4]))
+    # 密码登录
+    def psw_login(self,inputPhone,inputPsw,url):
+        self.open_url(url)
+        self.login_page()
+        self.psw_login_page()
+        self.login_phone(inputPhone)
+        self.login_psw(inputPsw)
+        self.login_button()
+        sleep(2)
+    # 登录成功用户名
+    def login_success_username(self):
+        return self.get_text(*(login_elements()[5]))
+    # 前端错误信息提示
+    def login_error_page(self):
+        return self.get_text(*(login_elements()[19]))
+    # 服务器错误信息提示
+    def login_error_sever(self):
+        return self.get_text(*(login_elements()[20]))
+
 # 验证码登录
     def code_login(self):
         inputPhone = readconfig.inputPhone_cookie
@@ -102,5 +108,6 @@ class Login(object):
         self.B.send_word(codes[0],By.XPATH,self.data14)
         self.B.click_btn(By.XPATH,self.data15)
         self.B.click_btn(By.XPATH,self.data16)
-if __name__ == '__main__':
-    Login().psw_login()
+# if __name__ == '__main__':
+#     login = Login(driver=webdriver.Firefox())
+#     login.psw_login('18782038145','a123456','http://qiyuebao-t.yunxitech.cn/')
