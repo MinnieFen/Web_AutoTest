@@ -2,12 +2,19 @@
 import unittest
 from PageObject.LoginPageObject import Login
 from Base.GetExcelData import get_excel_data
-from Base.MyUnit import MyTest
+# from Base.MyUnit import MyTest
 from config import readconfig
+from Base.DriverBase import DriverBase
 
 url = readconfig.url_login
 logindata = get_excel_data('logindata')
-class Test_login(MyTest):
+driverBase = DriverBase()
+class Test_login(unittest.TestCase):
+    def setUp(self):
+        self.driver = driverBase.open_broswer()
+        driverBase.max_window()
+    def tearDown(self):
+        driverBase.quit_broswer()
     def test_login_01(self):
         '''账号密码正确登录'''
         login = Login(self.driver)

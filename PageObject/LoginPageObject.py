@@ -7,7 +7,7 @@ from Base import GetExcelData
 from Base.BasePage import BasePage
 from Base.SQLconnect import MySQLUtil
 from PageElements.LoginPageElements import login_elements
-from Base.DriverBase import start_driver
+# from Base.DriverBase import start_driver
 class Login(BasePage):
     # def __init__(self):
     #     self.d = start_driver()
@@ -18,6 +18,7 @@ class Login(BasePage):
     # def open_page(self):
     #     self.url = readconfig.url_login
     #     self.open_url(self.url)
+
     # 跳转到登录页面
     def login_page(self):
         self.click_btn(*(login_elements()[0]))

@@ -28,6 +28,9 @@ class BasePage(object):
     def ele_target(self,*loc):
         target = self.driver.find_element(*loc)
         return self.driver.excute_script("arguments[0].scrollIntoView();",target)
+# 添加cookie
+    def add_cookie(self,cookie):
+        return self.driver.add_cookie(cookie)
 # 退出driver
     def quit_driver(self):
         return self.driver.quit()
