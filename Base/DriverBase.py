@@ -10,16 +10,17 @@ from config import readconfig
 #     else:
 #         driver = webdriver.Ie()
 #     return driver
+
 class DriverBase():
     def __init__(self):
         self.driverName = readconfig.browserName
+    def open_broswer(self):
         if self.driverName == 'Firefox' or self.driverName == 'firefox':
             self.driver = webdriver.Firefox()
         elif self.driverName == 'Chrome' or self.driverName == 'chrome':
             self.driver = webdriver.Chrome()
         else:
             self.driver = webdriver.Ie()
-    def open_broswer(self):
         driver = self.driver
         return driver
     def quit_broswer(self):

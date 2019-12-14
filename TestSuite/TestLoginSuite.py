@@ -4,17 +4,22 @@ from PageObject.LoginPageObject import Login
 from Base.GetExcelData import get_excel_data
 # from Base.MyUnit import MyTest
 from config import readconfig
+# from Base.DriverBase import start_driver
 from Base.DriverBase import DriverBase
 
 url = readconfig.url_login
 logindata = get_excel_data('logindata')
+# driverBase = start_driver()
 driverBase = DriverBase()
 class Test_login(unittest.TestCase):
     def setUp(self):
         self.driver = driverBase.open_broswer()
         driverBase.max_window()
+        # self.driver = start_driver()
+        self.driver.implicitly_wait(10)
     def tearDown(self):
         driverBase.quit_broswer()
+        # self.driver.quit()
     def test_login_01(self):
         '''账号密码正确登录'''
         login = Login(self.driver)
@@ -40,11 +45,11 @@ class Test_login(unittest.TestCase):
         login = Login(self.driver)
         login.psw_login(logindata[4]['phone'],logindata[4]['psw'],url)
         self.assertEqual(login.login_error_sever(),logindata[4]['except_result'])
-if __name__ == '__main__':
-    suite = unittest.TestSuite()
-    suite.addTest(Test_login('test_login_01'))
+# if __name__ == '__main__':
+    # suite = unittest.TestSuite()
+    # suite.addTest(Test_login('test_login_01'))
     # suite.addTest(Test_login('test_login_02'))
     # suite.addTest(Test_login('test_login_03'))
     # suite.addTest(Test_login('test_login_04'))
     # suite.addTest(Test_login('test_login_05'))
-    unittest.TextTestRunner().run(suite)
+    # unittest.TextTestRunner().run(suite)
