@@ -28,6 +28,9 @@ class BasePage(object):
     def ele_target(self,*loc):
         target = self.driver.find_element(*loc)
         return self.driver.excute_script("arguments[0].scrollIntoView();",target)
+# 获取登录cookie
+    def get_login_cookie(self):
+        return self.driver.get_cookie(name = 'laravel_session')
 # 添加cookie
     def add_cookie(self,cookie):
         return self.driver.add_cookie(cookie)

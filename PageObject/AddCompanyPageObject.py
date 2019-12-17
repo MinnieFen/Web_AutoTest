@@ -16,6 +16,15 @@ class Add_company(BasePage):
     # 输入添加公司名称
     def add_companyName(self,companyName):
         self.send_word(companyName,*(addCompany_elements()[2]))
+    # 展开公司行业
+    def company_vocation_list(self):
+        self.click_btn(*(addCompany_elements()[6]))
+    # 选择教育培训
+    def select_education(self):
+        self.click_btn(*(addCompany_elements()[7]))
+    # 选择水利水电
+    def select_waterboard(self):
+        self.click_btn(*(addCompany_elements()[8]))
     # 确认添加公司
     def add_company_verify(self):
         self.click_btn(*(addCompany_elements()[3]))
@@ -25,19 +34,48 @@ class Add_company(BasePage):
     # 添加公司，服务器报错信息
     def add_error_sever(self):
         return self.get_text(*(addCompany_elements()[5]))
-    # 添加公司
+    #添加公司，前端报错信息
+    def add_error_page(self):
+        return self.get_text(*(addCompany_elements()[9]))
+    # 获取登录cookie
+    def save_login_cookie(self,phone,psw,urlcookie):
+        return Cookie(self.driver).save_cookie(phone,psw,urlcookie)
+    # 保持登录状态
+    def keep_login_cookie(self,url):
+        return Cookie(self.driver).keep_login(url)
+    # 添加公司,默认行业
     def add_company(self,phone,psw,urlcookie,companyName,url):
-        cookie = Cookie()
-        login_cookie = cookie.get_cookie(phone,psw,urlcookie)
-        self.open_url(url)
-        self.add_cookie(login_cookie)
-        self.open_url(url)
-        # cookie.keep_login(phone,psw,urlcookie,url)
+        # cookie = Cookie(self.driver)
+        # Cookie(self.driver).save_cookie(phone,psw,urlcookie)
+        # login_cookie = cookie.get_cookie()
+        # self.open_url(url)
+        # self.add_cookie(login_cookie)
+        # self.open_url(url)
+        self.save_login_cookie(phone,psw,urlcookie)
+        self.keep_login_cookie(url)
         self.company_list()
         self.add_company_button()
         self.add_companyName(companyName)
         self.add_company_verify()
-        sleep(5)
+        sleep(3)
+    def add_company_education(self,companyName,url):
+        self.keep_login_cookie(url)
+        self.company_list()
+        self.add_company_button()
+        self.add_companyName(companyName)
+        self.company_vocation_list()
+        self.select_education()
+        self.add_company_verify()
+        sleep(3)
+    def add_company_waterboard(self,companyName,url):
+        self.keep_login_cookie(url)
+        self.company_list()
+        self.add_company_button()
+        self.add_companyName(companyName)
+        self.company_vocation_list()
+        self.select_waterboard()
+        self.add_company_verify()
+        sleep(3)
 # if __name__ == '__main__':
 #     a = Add_company(driver=webdriver.Firefox())
 #     urlcookie = readconfig.url_login
@@ -46,3 +84,7 @@ class Add_company(BasePage):
 #     url = readconfig.url_admin
 #     companyName = '金控集团'
 #     a.add_company(phone,psw,urlcookie,companyName,url)
+#     companyName1 = '金控集团1'
+#     a.add_company_education(companyName1,url)
+#     companyName2 = '金控集团2'
+#     a.add_company_waterboard(companyName2,url)

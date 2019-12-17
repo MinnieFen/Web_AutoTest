@@ -35,6 +35,7 @@ class MySQLUtil():
             return conn
         except Exception as a:
             print('数据库连接异常：%s' %a)
+    # 执行sql
     def get_execute(self,sql):
         # cursor = MySQLUtil().connect().cursor()
         cursor = self.conn.cursor()
@@ -48,7 +49,7 @@ class MySQLUtil():
             cursor.close()
             # MySQLUtil().connect().commit()
             self.conn.commit()
-
+    # 获取执行sql的数据
     def get_rows(self,sql):
         # cursor = MySQLUtil().connect().cursor()
         cursor = self.conn.cursor()
@@ -62,18 +63,18 @@ class MySQLUtil():
             rows = cursor.fetchall()
             cursor.close()
             return rows
+    # 关闭数据库连接
     def mysql_close(self):
         try:
             # MySQLUtil().connect().close()
             self.conn.close()
         except Exception as a:
             print('关闭数据库异常：%s' %a)
-if __name__ == '__main__':
-    mysql = MySQLUtil()
-    sql = '''SELECT `CODE` from sms_code_record WHERE PHONE = '18782038146' ORDER BY CTIME DESC'''
-    mysql.get_execute(sql)
-    codes = mysql.get_rows(sql)
-    print(codes)
-    print(type(codes))
-    print(codes[0])
-    mysql.mysql_close()
+# if __name__ == '__main__':
+#     mysql = MySQLUtil()
+#     sql = '''SELECT `CODE` from sms_code_record WHERE PHONE = '18782038146' ORDER BY CTIME DESC'''
+    # mysql.get_execute(sql)
+    # codes = mysql.get_rows(sql)
+    # print(codes)
+    # print(codes[0])
+    # mysql.mysql_close()
