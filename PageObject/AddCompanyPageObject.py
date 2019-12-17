@@ -44,14 +44,14 @@ class Add_company(BasePage):
     def keep_login_cookie(self,url):
         return Cookie(self.driver).keep_login(url)
     # 添加公司,默认行业
-    def add_company(self,phone,psw,urlcookie,companyName,url):
+    def add_company(self,companyName,url):
         # cookie = Cookie(self.driver)
         # Cookie(self.driver).save_cookie(phone,psw,urlcookie)
         # login_cookie = cookie.get_cookie()
         # self.open_url(url)
         # self.add_cookie(login_cookie)
         # self.open_url(url)
-        self.save_login_cookie(phone,psw,urlcookie)
+        # self.save_login_cookie(phone,psw,urlcookie)
         self.keep_login_cookie(url)
         self.company_list()
         self.add_company_button()

@@ -45,7 +45,7 @@ class AddCompany(unittest.TestCase):
         self.assertEqual(self.add.add_error_sever(),companyName[5]['except_result'])
 # if __name__ == '__main__':
 #     suite = unittest.TestSuite()
-    # suite.addTest(AddCompany('test_addCompany_01'))
+#     suite.addTest(AddCompany('test_addCompany_01'))
     # suite.addTest(AddCompany('test_addCompany_02'))
     # suite.addTest(AddCompany('test_addCompany_03'))
     # suite.addTest(AddCompany('test_addCompany_04'))
