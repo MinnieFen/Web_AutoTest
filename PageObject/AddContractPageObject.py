@@ -52,6 +52,7 @@ class Add_Contract(BasePage):
     # 保持登录状态
     def keep_login_cookie(self,url):
         return Cookie(self.driver).keep_login(url)
+    # 添加已完成契约
     def add_finish_contract(self,companyName,contract_word,contract_appraise,url):
         self.keep_login_cookie(url)
         sleep(3)
@@ -63,6 +64,20 @@ class Add_Contract(BasePage):
         self.select_time()
         self.contract_describe(contract_word)
         self.select_finish_contracr(contract_appraise)
+        self.add_contracr_verify()
+    # 添加未完成契约,未选择防伪印章
+    def add_unfinish_contract(self,url,companyName,contract_word):
+        self.keep_login_cookie(url)
+        sleep(2)
+        self.contract_list()
+        sleep(2)
+        self.add_contract_button()
+        sleep(2)
+        self.company_name(companyName)
+        self.select_company()
+        self.select_time()
+        self.contract_describe(contract_word)
+        self.select_unfinish_contract()
         self.add_contracr_verify()
 if __name__ == '__main__':
     con = Add_Contract(driver=webdriver.Firefox())
