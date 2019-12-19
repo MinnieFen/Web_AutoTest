@@ -43,10 +43,6 @@ class Cookie(BasePage):
         return cookie_data_dict
     def keep_login(self,url):
         cookieData = self.get_cookie()
-        # base = BasePage(self.driver)
-        # base.open_url(url)
-        # self.driver.add_cookie(cookieData)
-        # base.open_url(url)
         self.open_url(url)
         self.add_cookie(cookieData)
         self.open_url(url)
@@ -56,7 +52,7 @@ class Cookie(BasePage):
 #     phone = readconfig.inputPhone_cookie
 #     psw = readconfig.inputPsw_cookie
 #     urlcookie = readconfig.url_login
-    # url = readconfig.url_admin
-    # cookie.save_cookie(phone,psw,urlcookie)
+#     url = readconfig.url_admin
+#     cookie.save_cookie(phone,psw,urlcookie)
     # cookie.get_cookie()
     # cookie.keep_login(url)

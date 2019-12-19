@@ -7,7 +7,7 @@ def addContract_elements():
     search_btn = (By.XPATH,('//*[@class = "ui-button company-button"]'))                   # 3 搜索按钮
     select_company = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[4]/div[1]/div[2]/ul/li[1]/a'))    # 4 选择第一个公司
     contract_time_word = (By.XPATH,('//*[@class = "datepicker time-input"]'))              # 5 契约月份输入框
-    contract_time_btn = (By.XPATH,('/html/body/div[6]/div[2]/table/tbody/tr/td/span[7]'))  # 67月
+    contract_time_btn = (By.XPATH,('/html/body/div[5]/div[2]/table/tbody/tr/td/span[12]'))  # 6 12月
     contract_describe_word = (By.XPATH,('//*[@class = "describe-text"]'))                  # 7 契约描述
     contract_finish_btn = (By.XPATH,('//*[@class = "ui-radio type-over-title"]'))          # 8 已完成契约
     contract_appraise_word = (By.XPATH,('//*[@class = "over-describe-text"]'))             # 9 契约评价
