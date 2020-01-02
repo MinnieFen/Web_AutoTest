@@ -11,29 +11,21 @@ class Add_Contract(BasePage):
     def contract_list(self):
         self.click_btn(*(addContract_elements()[0]))
         sleep(3)
-        # self.click_btn(*(addContract_elements()[1]))
-    # 点击添加契约按钮
-    def add_contract_button(self):
         self.click_btn(*(addContract_elements()[1]))
-        sleep(3)
     # 输入公司名称，搜索
     def company_name(self,companyName):
         self.send_word(companyName,*(addContract_elements()[2]))
         self.click_btn(*(addContract_elements()[3]))
         sleep(3)
-    # 选择第一个公司
-    def select_company(self):
-        self.click_btn(*(addContract_elements()[4]))
-    # 选择契约月份
-    def select_time(self):
-        self.click_btn(*(addContract_elements()[5]))
+        self.click_btn(*(addContract_elements()[4]))       # 选择第一个公司
+        self.click_btn(*(addContract_elements()[5]))       # 选择当前月份
         sleep(2)
         self.click_btn(*(addContract_elements()[6]))
         sleep(2)
     # 输入契约描述
     def contract_describe(self,contract_word):
         self.send_word(contract_word,*(addContract_elements()[7]))
-    # 选择已完成契约
+    # 选择已完成契约，选择评价等级
     def select_finish_contracr(self,contract_appraise):
         self.click_btn(*(addContract_elements()[8]))
         self.send_word(contract_appraise,*(addContract_elements()[9]))
@@ -62,10 +54,7 @@ class Add_Contract(BasePage):
         self.keep_login_cookie(url)
         sleep(3)
         self.contract_list()
-        self.add_contract_button()
         self.company_name(companyName)
-        self.select_company()
-        self.select_time()
         self.contract_describe(contract_word)
         self.select_finish_contracr(contract_appraise)
         self.add_contracr_verify()
@@ -74,13 +63,11 @@ class Add_Contract(BasePage):
         self.keep_login_cookie(url)
         sleep(2)
         self.contract_list()
-        self.add_contract_button()
         self.company_name(companyName)
-        self.select_company()
-        self.select_time()
         self.contract_describe(contract_word)
         self.select_unfinish_contract()
         self.add_contracr_verify()
+
 # if __name__ == '__main__':
 #     con = Add_Contract(driver=webdriver.Firefox())
 #     companyName = '千帆渡'

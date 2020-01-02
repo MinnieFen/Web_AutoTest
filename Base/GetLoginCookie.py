@@ -54,5 +54,4 @@ class Cookie(BasePage):
 #     urlcookie = readconfig.url_login
 #     url = readconfig.url_admin
 #     cookie.save_cookie(phone,psw,urlcookie)
-    # cookie.get_cookie()
-    # cookie.keep_login(url)
+#     cookie.keep_login(url)

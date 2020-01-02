@@ -34,9 +34,6 @@ class BasePage(object):
 # 添加cookie
     def add_cookie(self,cookie):
         return self.driver.add_cookie(cookie)
-# 退出driver
-    def quit_driver(self):
-        return self.driver.quit()
 
 # if __name__ == '__main__':
 #     url = 'http://qiyuebao-t.yunxitech.cn/'
