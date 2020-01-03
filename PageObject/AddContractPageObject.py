@@ -67,7 +67,26 @@ class Add_Contract(BasePage):
         self.contract_describe(contract_word)
         self.select_unfinish_contract()
         self.add_contracr_verify()
-
+    # 添加未完成契约，选择我方使用防伪印章
+    def add_unfinish_use_stamp(self,url,companyName,contract_word):
+        self.keep_login_cookie(url)
+        sleep(2)
+        self.contract_list()
+        self.company_name(companyName)
+        self.contract_describe(contract_word)
+        self.select_unfinish_contract()
+        self.select_use_stamp()
+        self.add_contracr_verify()
+    # 添加未完成契约，选择对方使用防伪印章
+    def add_unfinish_other_use_stamp(self,url,companyName,contract_word):
+        self.keep_login_cookie(url)
+        sleep(2)
+        self.contract_list()
+        self.company_name(companyName)
+        self.contract_describe(contract_word)
+        self.select_unfinish_contract()
+        self.select_other_use_stamp()
+        self.add_contracr_verify()
 # if __name__ == '__main__':
 #     con = Add_Contract(driver=webdriver.Firefox())
 #     companyName = '千帆渡'
