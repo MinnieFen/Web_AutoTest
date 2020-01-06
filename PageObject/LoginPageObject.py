@@ -50,6 +50,7 @@ class Login(BasePage):
     # 服务器错误信息提示
     def login_error_sever(self):
         return self.get_text(*(login_elements()[20]))
+    # 获取验证码
     def get_code(self,search,table,where):
         return mysql.select(search,table,where)
     # 密码登录
@@ -62,27 +63,33 @@ class Login(BasePage):
         self.login_button()
         sleep(2)
     # 验证码登录
-    def code_login(self,url,inputPhone,code):
+    def send_code_login(self,url,inputPhone):
         self.open_url(url)
         self.login_page()
+        sleep(3)
         self.login_phone(inputPhone)
-        self.click_btn()
-        sleep(5)
+        self.click_btn(*(login_elements()[6]))
+        sleep(3)
+    def code_login(self,code):
         self.login_psw(code)
         self.login_button()
         sleep(2)
     # 忘记密码
-    def psw_reset(self,url,inputPhone,new_psw,search,table,where,code):
+    def send_code_reset(self,url,inputPhone):
         self.open_url(url)
         self.login_page()
         self.click_btn(*(login_elements()[7]))
         self.login_phone(inputPhone)
         self.click_code()
-        sleep(5)
-        # mysql.select(search,table,where)
-        self.get_code(search,table,where)
+        sleep(3)
+        # self.get_code(search,table,where)
+        # self.login_psw(code)
+        # self.send_word(new_psw,*(login_elements()[8]))
+        # self.login_button()
+        # sleep(2)
+    def psw_reset(self,code,new_psw):
         self.login_psw(code)
-        self.send_word(new_psw,*(login_elements()[8]))
+        self.send_word(new_psw, *(login_elements()[8]))
         self.login_button()
         sleep(2)
     # 注册账号

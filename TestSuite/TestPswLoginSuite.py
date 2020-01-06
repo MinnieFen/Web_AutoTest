@@ -6,7 +6,7 @@ from config import readconfig
 from Base.DriverBase import DriverBase
 
 url = readconfig.url_login
-logindata = get_excel_data('logindata')
+logindata = get_excel_data('psw_login')
 driverBase = DriverBase()
 class Test_login(unittest.TestCase):
     def setUp(self):
@@ -37,11 +37,11 @@ class Test_login(unittest.TestCase):
         '''账号和密码不匹配'''
         self.login.psw_login(logindata[4]['phone'],logindata[4]['psw'],url)
         self.assertEqual(self.login.login_error_sever(),logindata[4]['except_result'])
-# if __name__ == '__main__':
-#     suite = unittest.TestSuite()
-#     suite.addTest(Test_login('test_login_01'))
+if __name__ == '__main__':
+    suite = unittest.TestSuite()
+    suite.addTest(Test_login('test_login'))
 #     suite.addTest(Test_login('test_login_02'))
     # suite.addTest(Test_login('test_login_03'))
     # suite.addTest(Test_login('test_login_04'))
     # suite.addTest(Test_login('test_login_05'))
-    # unittest.TextTestRunner().run(suite)
+    unittest.TextTestRunner().run(suite)
