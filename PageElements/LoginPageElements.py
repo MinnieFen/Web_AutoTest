@@ -22,8 +22,9 @@ def login_elements():
     logout_btn = (By.XPATH,'/html/body/nav/div/div[2]/ul/li[2]/ul/li[4]/a')        # 18点击退出按钮
     login_error_page = (By.CSS_SELECTOR,'.ui-tips-before')          # 19前端页面错误信息提示
     login_error_server = (By.XPATH,'//*[@class = "layui-layer-content"]')   # 20服务器错误信息提示
+    register_heard_btn = (By.XPATH,'/html/body/nav/div/div[2]/ul/li[3]/a')   # 21 heard处企业注册按钮
     return login_page_btn, psw_login_btn, phone_word, psw_word, login_btn, user_name_text,get_code_btn, forgot_psw_btn, new_psw_word,\
             register_page_btn,register_phone_word,register_psw_word,register_name_word,register_code_btn,register_code_word,agree_deal_btn,\
-            confirm_register_btn,back_to_homepage,logout_btn,login_error_page,login_error_server
+            confirm_register_btn,back_to_homepage,logout_btn,login_error_page,login_error_server,register_heard_btn
 # login_elements()
 # print(login_elements())

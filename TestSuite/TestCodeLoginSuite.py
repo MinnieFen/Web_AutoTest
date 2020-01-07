@@ -17,7 +17,7 @@ class Test_code_login(unittest.TestCase):
         self.driver.implicitly_wait(10)
     def tearDown(self):
         driverBase.quit_broswer()
-    def test_code_login(self):
+    def test_code_login_success(self):
         '''账号验证码正确登录'''
         self.login.send_code_login(url,logindata[0]['phone'])
         codes = self.login.get_code(sqldata[4]['set or search'],sqldata[4]['table'],sqldata[4]['where'])
@@ -38,10 +38,17 @@ class Test_code_login(unittest.TestCase):
         codes = self.login.get_code(sqldata[4]['set or search'],sqldata[4]['table'],sqldata[4]['where'])
         self.login.code_login(codes[1])
         self.assertEqual(self.login.login_error_sever(),logindata[3]['except_result'])
-if __name__ == '__main__':
-    suite = unittest.TestSuite()
-    suite.addTest(Test_code_login('test_code_login'))
-    # suite.addTest(Test_code_login('test_code_login_nullcode'))
-    # suite.addTest(Test_code_login('test_code_login_allnull'))
-    # suite.addTest(Test_code_login('test_code_login_mismatch'))
-    unittest.TextTestRunner().run(suite)
+    def test_code_login_newphone(self):
+        '''系统中不存在的账号，验证码登录成功，一条数据只能测试一次'''
+        self.login.send_code_login(url,logindata[4]['phone'])
+        codes = self.login.get_code(sqldata[4]['set or search'],sqldata[4]['table'],sqldata[4]['where'])
+        self.login.code_login(codes[0])
+        self.assertEqual(self.login.login_success_username(),logindata[4]['except_result'])
+# if __name__ == '__main__':
+#     suite = unittest.TestSuite()
+#     suite.addTest(Test_code_login('test_code_login_success'))
+#     suite.addTest(Test_code_login('test_code_login_nullcode'))
+#     suite.addTest(Test_code_login('test_code_login_allnull'))
+#     suite.addTest(Test_code_login('test_code_login_mismatch'))
+#     suite.addTest(Test_code_login('test_code_login_newphone'))
+#     unittest.TextTestRunner().run(suite)

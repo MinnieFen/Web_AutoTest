@@ -6,6 +6,7 @@ from PageElements.AddCompanyPageElements import addCompany_elements
 from Base.SQLconnect import MySQLUtil
 from Base.GetLoginCookie import Cookie
 from config import readconfig
+from PageObject.LoginPageObject import Login
 class Add_company(BasePage):
     # 点击展开公司列表
     def company_list(self):
@@ -28,6 +29,7 @@ class Add_company(BasePage):
     # 确认添加公司
     def add_company_verify(self):
         self.click_btn(*(addCompany_elements()[3]))
+        sleep(3)
     # hearde显示的公司名称
     def companyName(self):
         return self.get_text(*(addCompany_elements()[0]))
@@ -45,19 +47,13 @@ class Add_company(BasePage):
         return Cookie(self.driver).keep_login(url)
     # 添加公司,默认行业
     def add_company(self,companyName,url):
-        # cookie = Cookie(self.driver)
-        # Cookie(self.driver).save_cookie(phone,psw,urlcookie)
-        # login_cookie = cookie.get_cookie()
-        # self.open_url(url)
-        # self.add_cookie(login_cookie)
-        # self.open_url(url)
-        # self.save_login_cookie(phone,psw,urlcookie)
         self.keep_login_cookie(url)
         self.company_list()
         self.add_company_button()
         self.add_companyName(companyName)
         self.add_company_verify()
         sleep(3)
+    # 选择教育行业
     def add_company_education(self,companyName,url):
         self.keep_login_cookie(url)
         self.company_list()
@@ -67,6 +63,7 @@ class Add_company(BasePage):
         self.select_education()
         self.add_company_verify()
         sleep(3)
+    #选择水利水电行业
     def add_company_waterboard(self,companyName,url):
         self.keep_login_cookie(url)
         self.company_list()
@@ -75,6 +72,11 @@ class Add_company(BasePage):
         self.company_vocation_list()
         self.select_waterboard()
         self.add_company_verify()
+        sleep(3)
+    def first_login(self):
+        self.click_btn(*(addCompany_elements()[11]))
+        sleep(3)
+        self.click_btn(*(addCompany_elements()[12]))
         sleep(3)
 # if __name__ == '__main__':
 #     a = Add_company(driver=webdriver.Firefox())
