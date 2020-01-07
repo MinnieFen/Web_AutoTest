@@ -39,7 +39,7 @@ class Test_code_login(unittest.TestCase):
         self.login.code_login(codes[1])
         self.assertEqual(self.login.login_error_sever(),logindata[3]['except_result'])
     def test_code_login_newphone(self):
-        '''系统中不存在的账号，验证码登录成功，一条数据只能测试一次'''
+        '''系统中不存在的账号，验证码登录成功'''
         self.login.send_code_login(url,logindata[4]['phone'])
         codes = self.login.get_code(sqldata[4]['set or search'],sqldata[4]['table'],sqldata[4]['where'])
         self.login.code_login(codes[0])

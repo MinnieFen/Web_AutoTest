@@ -8,21 +8,10 @@ from Base.BasePage import BasePage
 from Base.SQLconnect import MySQLUtil
 from PageElements.LoginPageElements import login_elements
 from PageElements.AddCompanyPageElements import addCompany_elements
-
 # from Base.DriverBase import start_driver
 mysql = MySQLUtil(db=readconfig.sql_db_qiyuebao)
 sqldata = get_excel_data('sql_data')
 class Login(BasePage):
-    # def __init__(self):
-    #     self.d = start_driver()
-    #     # url = readconfig.url_login
-    #     # self.d.get(url)
-    #     self.B = BasePage(self.d)
-    # 打开页面
-    # def open_page(self):
-    #     self.url = readconfig.url_login
-    #     self.open_url(self.url)
-
     # 跳转到登录页面
     def login_page(self):
         self.click_btn(*(login_elements()[0]))
@@ -93,10 +82,10 @@ class Login(BasePage):
         self.login_button()
         sleep(2)
     # 注册账号
-    def register_heard(self,url):
+    def register_heard(self,url):      # 点击heard注册按钮进入注册页面
         self.open_url(url)
         self.click_btn(*login_elements()[21])
-    def register_loginpage(self,url):
+    def register_loginpage(self,url):   #点击登录页面注册进入注册页面
         self.open_url(url)
         self.login_page()
         self.click_btn(*(login_elements()[9]))

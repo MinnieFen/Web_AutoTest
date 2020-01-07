@@ -18,7 +18,7 @@ class Add_Contract(BasePage):
         self.click_btn(*(addContract_elements()[3]))
         sleep(3)
         self.click_btn(*(addContract_elements()[4]))       # 选择第一个公司
-        self.click_btn(*(addContract_elements()[5]))       # 选择当前月份
+        self.click_btn(*(addContract_elements()[5]))       # 选择12月
         sleep(2)
         self.click_btn(*(addContract_elements()[6]))
         sleep(2)
@@ -49,6 +49,9 @@ class Add_Contract(BasePage):
     # 保持登录状态
     def keep_login_cookie(self,url):
         return Cookie(self.driver).keep_login(url)
+    # 前端错误提示
+    def contract_error_page(self):
+        return self.get_text(*(addContract_elements()[19]))
     # 添加已完成契约
     def add_finish_contract(self,companyName,contract_word,contract_appraise,url):
         self.keep_login_cookie(url)

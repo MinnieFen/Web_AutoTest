@@ -20,5 +20,7 @@ def addContract_elements():
     use_stamp_btn = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[4]/div[8]/div[2]/div[1]/div[1]/label[1]'))   # 16 我方使用防伪印章
     other_use_stamp_btn = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[4]/div[8]/div[2]/div[1]/div[2]/label[1]'))   # 17 对方使用防伪印章
     add_contract_verify_btn = (By.XPATH,('//*[@class = "over-btn btn btn-primary"]'))          # 18 确认添加契约
+    add_error_page = (By.XPATH,('//*[@class = "ui-tips-before"]'))                             # 19 前端页面错误信息提示
     return my_contract_list,add_contract_btn,company_input_word,search_btn,select_company,contract_time_word,contract_time_btn,contract_describe_word,contract_finish_btn,\
-           contract_appraise_word,attitude,quality,efficiency,credit,specialty,contract_unfinish_btn,use_stamp_btn,other_use_stamp_btn,add_contract_verify_btn
+           contract_appraise_word,attitude,quality,efficiency,credit,specialty,contract_unfinish_btn,use_stamp_btn,other_use_stamp_btn,add_contract_verify_btn,\
+           add_error_page

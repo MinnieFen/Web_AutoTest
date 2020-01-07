@@ -34,7 +34,7 @@ class Test_register(unittest.TestCase):
         self.login.send_code_register_heard(url,register_data[1]['phone'],register_data[1]['psw'],register_data[1]['name'])
         self.assertEqual(self.login.login_error_page(),register_data[1]['except_result'])
     # 密码为空
-    def test_nullpsw(self):
+    def test_empty_psw(self):
         '''请输入密码'''
         self.login.send_code_register_heard(url,register_data[2]['phone'],register_data[2]['psw'],register_data[2]['name'])
         codes = self.login.get_code(sqldata[7]['set or search'],sqldata[7]['table'],sqldata[7]['where'])
@@ -43,7 +43,7 @@ class Test_register(unittest.TestCase):
         self.login.register()
         self.assertEqual(self.login.login_error_page(),register_data[2]['except_result'])
     # 姓名为空
-    def test_nullname(self):
+    def test_empty_name(self):
         '''请输入姓名'''
         self.login.send_code_register_loginpage(url,register_data[3]['phone'],register_data[3]['psw'],register_data[3]['name'])
         codes = self.login.get_code(sqldata[7]['set or search'],sqldata[7]['table'],sqldata[7]['where'])
@@ -52,7 +52,7 @@ class Test_register(unittest.TestCase):
         self.login.register()
         self.assertEqual(self.login.login_error_page(),register_data[3]['except_result'])
     # 手机号为空
-    def test_nullphone(self):
+    def test_empty_phone(self):
         '''请输入手机号'''
         self.login.send_code_register_loginpage(url,register_data[4]['phone'],register_data[4]['psw'],register_data[4]['name'])
         codes = self.login.get_code(sqldata[7]['set or search'],sqldata[7]['table'],sqldata[7]['where'])
@@ -104,25 +104,31 @@ class Test_register(unittest.TestCase):
         self.login.register()
         self.assertEqual(self.login.login_error_page(),register_data[9]['except_result'])
     # 验证码为空
-    def test_nullcode(self):
+    def test_empty_code(self):
         '''请输入验证码'''
         self.login.send_code_register_loginpage(url,register_data[10]['phone'],register_data[10]['psw'],register_data[10]['name'])
         self.login.wirte_code_register(code = '')
         self.login.select_deal()
         self.login.register()
         self.assertEqual(self.login.login_error_page(),register_data[10]['except_result'])
+    # 所有数据都为空
+    def test_all_empty(self):
+        '''请输入手机号'''
+        self.login.send_code_register_loginpage(url, register_data[11]['phone'], register_data[11]['psw'], register_data[11]['name'])
+        self.login.register()
+        self.assertEqual(self.login.login_error_page(), register_data[11]['except_result'])
     # 不勾选服务协议
     def test_ignore_deal(self):
         '''请阅读服务协议并勾选'''
-        self.login.send_code_register_loginpage(url, register_data[11]['phone'], register_data[11]['psw'], register_data[11]['name'])
+        self.login.send_code_register_loginpage(url, register_data[12]['phone'], register_data[12]['psw'], register_data[12]['name'])
         codes = self.login.get_code(sqldata[9]['set or search'], sqldata[9]['table'], sqldata[9]['where'])
         self.login.wirte_code_register(codes[0])
         self.login.register()
-        self.assertEqual(self.login.login_error_page(), register_data[11]['except_result'])
+        self.assertEqual(self.login.login_error_page(), register_data[12]['except_result'])
     # 注册成功后添加公司
     def test_register_addcompany(self):
         '''注册成功，添加公司'''
-        self.login.send_code_register_loginpage(url,register_data[12]['phone'],register_data[12]['psw'],register_data[12]['name'])
+        self.login.send_code_register_loginpage(url,register_data[13]['phone'],register_data[13]['psw'],register_data[13]['name'])
         codes = self.login.get_code(sqldata[10]['set or search'],sqldata[10]['table'],sqldata[10]['where'])
         self.login.wirte_code_register(codes[0])
         self.login.select_deal()
@@ -134,15 +140,16 @@ class Test_register(unittest.TestCase):
     # suite = unittest.TestSuite()
     # suite.addTest(Test_register('test_register_success'))
     # suite.addTest(Test_register('test_exist_phone'))
-    # suite.addTest(Test_register('test_nullpsw'))
-    # suite.addTest(Test_register('test_nullname'))
-    # suite.addTest(Test_register('test_nullphone'))
+    # suite.addTest(Test_register('test_empty_psw'))
+    # suite.addTest(Test_register('test_empty_name'))
+    # suite.addTest(Test_register('test_empty_phone'))
     # suite.addTest(Test_register('test_incongruent_phone'))
     # suite.addTest(Test_register('test_incongruent_psw'))
     # suite.addTest(Test_register('test_allnumber_psw'))
     # suite.addTest(Test_register('test_less_psw'))
     # suite.addTest(Test_register('test_mismatch'))
-    # suite.addTest(Test_register('test_nullcode'))
+    # suite.addTest(Test_register('test_empty_code'))
+    # suite.addTest(Test_register('test_all_empty'))
     # suite.addTest(Test_register('test_ignore_deal'))
     # suite.addTest(Test_register('test_register_addcompany'))
     # unittest.TextTestRunner().run(suite)
