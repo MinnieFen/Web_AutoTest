@@ -6,6 +6,7 @@ from HTMLTestRunner import HTMLTestRunner
 import smtplib
 from email.mime.text import MIMEText
 from config import readconfig
+# from tomorrow import threads
 
 cur_path = os.path.dirname(os.path.realpath(__file__))
 def add_case(caseName = 'TestSuite',rule = 'Test*.py'):
@@ -13,11 +14,12 @@ def add_case(caseName = 'TestSuite',rule = 'Test*.py'):
     discover = unittest.defaultTestLoader.discover(case_path,pattern=rule,top_level_dir=None)
     return discover
 
-def run_case(all_case,reportName = 'report'):
+
+def run_case(all_case,reportName = 'report',nth = 0):
     now = time.strftime("%Y_%m_%d_%H_%M_%S")
     report_path = os.path.join(cur_path,reportName)
     if not os.path.exists(report_path):os.mkdir(report_path)
-    report_abspath = os.path.join(report_path,now + 'result.html')
+    report_abspath = os.path.join(report_path,now + 'result%s.html' %nth)
     print('report path:%s' %report_abspath)
     fp = open(report_abspath,'wb')
     runner = HTMLTestRunner(stream=fp,title=u'UI自动化测试报告，测试结果：',description=u'用例执行详情')
@@ -44,7 +46,9 @@ if __name__ == '__main__':
     # 加载用例
     all_case = add_case()
     #执行用例，生成测试报告的路径
-    run_case(all_case)
+    # run_case(all_case)
+    for i,j in zip(all_case,range(len(list(all_case)))):
+        run_case(i, nth = j)
 #获取最新的测试报告
     report_path = os.path.join(cur_path,'report')
     report_file = get_report_file(report_path)
