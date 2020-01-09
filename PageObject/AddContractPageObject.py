@@ -66,7 +66,7 @@ class Add_Contract(BasePage):
     def contract_error_page(self):
         return self.get_text(*(addContract_elements()[19]))
     # 添加已完成契约
-   def add_finish_contract(self,url,companyName,contract_word,contract_appraise):
+    def add_finish_contract(self,url,companyName,contract_word,contract_appraise):
         self.keep_login_cookie(url)
         sleep(3)
         self.contract_list()
