@@ -6,14 +6,15 @@ from HTMLTestRunner import HTMLTestRunner
 import smtplib
 from email.mime.text import MIMEText
 from config import readconfig
-# from tomorrow import threads
+from tomorrow3 import threads
+from BeautifulReport import BeautifulReport
 
 cur_path = os.path.dirname(os.path.realpath(__file__))
 def add_case(caseName = 'TestSuite',rule = 'Test*.py'):
     case_path = os.path.join(cur_path,caseName)
     discover = unittest.defaultTestLoader.discover(case_path,pattern=rule,top_level_dir=None)
     return discover
-
+@threads(2)
 def run_case(all_case,reportName = 'report'):
     now = time.strftime("%Y_%m_%d_%H_%M_%S")
     report_path = os.path.join(cur_path,reportName)
@@ -45,9 +46,9 @@ if __name__ == '__main__':
     # 加载用例
     all_case = add_case()
     #执行用例，生成测试报告的路径
-    run_case(all_case)
-    # for i,j in zip(all_case,range(len(list(all_case)))):
-    #     run_case(i, nth = j)
+    # run_case(all_case)
+    for i in all_case:
+        run_case(i)
 #获取最新的测试报告
     report_path = os.path.join(cur_path,'report')
     report_file = get_report_file(report_path)
