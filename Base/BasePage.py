@@ -12,6 +12,9 @@ class BasePage(object):
 # 定位元素
     def find_web_element(self, *loc):
         return self.driver.find_element(*loc)
+# 定位一组元素
+    def find_web_elements(self,*loc):
+        return self.driver.find_elements(*loc)
 # 元素点击操作
     def click_btn(self, *loc):
         return self.driver.find_element(*loc).click()
