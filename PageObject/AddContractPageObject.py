@@ -137,61 +137,71 @@ class Add_Contract(BasePage):
     def wait_confirm_num(self):
         return self.get_text(*(addContract_elements()[28]))
     # 确认完成契约
-    def confirm_ensure(self,url):
-        self.select_wait_confirm(url)
+    def confirm_ensure(self):
+        # self.select_wait_confirm(url)
         self.click_btn(*(addContract_elements()[34]))
         self.click_btn(*(addContract_elements()[36]))
+        sleep(3)
     # 取消确认完成契约
-    def confirm_cancel(self,url):
-        self.select_wait_confirm(url)
+    def confirm_cancel(self):
+        # self.select_wait_confirm(url)
         self.click_btn(*(addContract_elements()[34]))
         self.click_btn(*(addContract_elements()[35]))
+        sleep(3)
     # 选择拒绝契约
-    def select_refuse(self,url):
-        self.select_wait_confirm(url)
+    def select_refuse(self):
+        # self.select_wait_confirm(url)
         self.click_btn(*(addContract_elements()[37]))
     # 确认拒绝契约
-    def refuse_ensure(self,url,reason):
-        self.select_refuse(url)
+    def refuse_ensure(self,reason):
+        self.select_refuse()
         self.send_word(reason,*(addContract_elements()[38]))
-        sleep(3)
         self.click_btn(*(addContract_elements()[40]))
+        sleep(2)
     # 取消拒绝契约
-    def refuse_cancel(self,url,reason):
-        self.select_refuse(url)
-        self.send_word(reason,*(addContract_elements()[38]))
+    def refuse_cancel(self):
+        self.select_refuse()
+        # self.send_word(reason,*(addContract_elements()[38]))
         self.click_btn(*(addContract_elements()[39]))
     # 选择待我完成契约列表
     def select_wait_complete(self,url):
         self.keep_login_cookie(url)
-        sleep(3)
+        sleep(2)
+        self.contract_list()
+        sleep(2)
         self.click_btn(*(addContract_elements()[25]))
     # 待我完成列表数量
     def wait_complete_num(self):
         return self.get_text(*(addContract_elements()[29]))
     # 确认完成契约
-    def complete_ensure(self,url):
-        self.select_wait_complete(url)
+    def complete_ensure(self):
+        # self.select_wait_complete(url)
         self.click_btn(*(addContract_elements()[41]))
         self.click_btn(*(addContract_elements()[43]))
+        sleep(3)
     # 取消完成契约
-    def complete_cancel(self,url):
-        self.select_wait_complete(url)
+    def complete_cancel(self):
+        # self.select_wait_complete(url)
         self.click_btn(*(addContract_elements()[41]))
         self.click_btn(*(addContract_elements()[42]))
+        sleep(2)
     # 选择待我评价列表
     def select_wait_appraise(self,url):
         self.keep_login_cookie(url)
-        sleep(3)
+        sleep(2)
+        self.contract_list()
         self.click_btn(*(addContract_elements()[26]))
-        self.click_btn(*(addContract_elements()[44]))
+        sleep(2)
     # 待我评价列表数量
     def wait_appraise_num(self):
         return self.get_text(*(addContract_elements()[30]))
-    # 输入评价内容
-    def appraise_content(self,url,content):
-        self.select_wait_appraise(url)
+    # 点击评价按钮，输入评价内容
+    def appraise_content(self,content):
+        # self.select_wait_appraise(url)
+        self.click_btn(*(addContract_elements()[44]))
+        sleep(1)
         self.send_word(content,*(addContract_elements()[45]))
+        sleep(2)
     # 选择评价星级
     def appraise_grade(self):
         self.click_btn(*(addContract_elements()[46]))
@@ -199,45 +209,62 @@ class Add_Contract(BasePage):
         self.click_btn(*(addContract_elements()[48]))
         self.click_btn(*(addContract_elements()[49]))
         self.click_btn(*(addContract_elements()[50]))
-    # 确认评价，选择评价等级
-    def appraise_ensure(self,url,content):
-        self.appraise_content(url,content)
+    # 输入评价内容，选择评价等级,确认评价
+    def appraise_ensure(self,content):
+        self.appraise_content(content)
         self.appraise_grade()
         self.click_btn(*(addContract_elements()[52]))
-    # 确认评价，不选择评价等级
-    def appraise_empty_grade(self,url,content):
-        self.appraise_content(url,content)
+        sleep(2)
+    # 输入评价内容，不选择评价等级，确认评价
+    def appraise_empty_grade(self,content):
+        self.appraise_content(content)
         self.click_btn(*(addContract_elements()[52]))
-    # 取消评价，选择评价等级
-    def appraise_cancel(self,url,content):
-        self.appraise_content(url,content)
+    # 输入评价内容，选择评价等级，取消评价
+    def appraise_cancel(self,content):
+        self.appraise_content(content)
         self.appraise_grade()
         self.click_btn(*(addContract_elements()[51]))
-    # 取消评价,不选择评价等级
-    def appraise_cancel_empty(self,url,content):
-        self.appraise_content(url,content)
-        self.click_btn(*(addContract_elements()[51]))
+    # 不输入评价内容，不选择评价等级，确定评价
+    def appraise_cancel_empty(self,content):
+        self.appraise_content(content)
+        self.click_btn(*(addContract_elements()[52]))
     # 待对方确认列表
     def select_wait_other_confirm(self,url):
         self.keep_login_cookie(url)
-        sleep(3)
+        sleep(2)
+        self.contract_list()
         self.click_btn(*(addContract_elements()[27]))
+        sleep(2)
     # 待对方确认数量
     def wait_other_confirm_num(self):
         return self.get_text(*(addContract_elements()[31]))
     # 编辑契约，不修改直接确认
-    def unaltered_ensure(self,url):
-        self.select_wait_other_confirm(url)
+    def unaltered_ensure(self):
+        # self.select_wait_other_confirm(url)
         self.click_btn(*(addContract_elements()[53]))
         self.click_btn(*(addContract_elements()[18]))
+        sleep(2)
     # 编辑契约，重新选择月份，重新输入描述
-    def alter_time_ensure(self,url,decrible):
-        self.select_wait_other_confirm(url)
+    def alter_ensure(self,decrible):
+        # self.select_wait_other_confirm(url)
         self.click_btn(*(addContract_elements()[53]))
         self.click_btn(*(addContract_elements()[54]))
         self.send_word(decrible,*(addContract_elements()[7]))
         self.click_btn(*(addContract_elements()[18]))
-
+        sleep(2)
+    # 待确认列表，取消删除
+    def delect_cancel(self):
+        self.click_btn(*(addContract_elements()[55]))
+        self.click_btn(*(addContract_elements()[56]))
+        sleep(2)
+    # 待确认列表，确认删除
+    def delect_ensure(self):
+        self.click_btn(*(addContract_elements()[55]))
+        self.click_btn(*(addContract_elements()[57]))
+        sleep(2)
+    # 待确认列表，描述内容
+    # def waitconfirm_text(self):
+        # self.get_text(*(addContract_elements()[58]))
 # if __name__ == '__main__':
     # con = Add_Contract(driver=webdriver.Firefox())
 #     companyName = '千帆渡'

@@ -46,8 +46,8 @@ def addContract_elements():
     complete_btn = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[3]/div/div[2]/button'))         # 41第一条完成契约按钮
     complete_cancle_btn = (By.XPATH,('//*[@id="cancelbtn"]'))                                                                    # 42 取消完成契约
     confirm_complete = (By.XPATH,('//*[@id="confimbtn"]'))                                                                   # 43 确认完成契约
-    appraise_btn = (By.XPATH,('//*[@class = "btn-radius"]'))                                                                 # 44 评价按钮
-    appraise_word = (By.XPATH,('//*[@class = "form-control"]'))                                                              # 45 评价内容输入框
+    appraise_btn = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[4]/div[1]/div[2]/button'))      # 44 评价按钮
+    appraise_word = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/form/textarea'))                      # 45 评价内容输入框
     appraise_attitude = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/form/div/div[1]/span[2]/img[1]')) # 46 态度一星
     appraise_quality = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/form/div/div[2]/span[2]/img[2]'))  # 47 质量两星
     appraise_efficiency = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/form/div/div[3]/span[2]/img[3]')) # 48 效率三星
@@ -60,7 +60,7 @@ def addContract_elements():
     wait_other_confirm_delet = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[5]/div/div[2]/button[2]')) # 55 删除待对方确认契约按钮
     delet_cancel = (By.XPATH,('//*[@id="cancelbtn"]'))                                                                              # 56 取消删除
     delet_ensure = (By.XPATH,('//*[@id="confimbtn"]'))                                                                              # 57 确认删除
-
+    # describe_text = (By.LINK_TEXT('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[5]/div[1]/p[2]'))                      # 58 获取待确认列表描述内容
     all_list_pages = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li/a'))       # 52 获取分页总数
     all_list_last_page = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[1]/a/span'))    # 53 上一页按钮
     all_list_next_page = (By.XPATH,('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[5]/a/span'))    # 54 下一页按钮

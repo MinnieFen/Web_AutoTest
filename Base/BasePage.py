@@ -1,5 +1,6 @@
 # coding:utf-8
-
+from time import sleep
+from selenium.webdriver.common.keys import Keys
 class BasePage(object):
     def __init__(self,driver):
         self.driver = driver
@@ -30,7 +31,7 @@ class BasePage(object):
 # 元素聚焦
     def ele_target(self,*loc):
         target = self.driver.find_element(*loc)
-        return self.driver.excute_script("arguments[0].scrollIntoView();",target)
+        self.driver.execute_script("arguments[0].scrollIntoView();",target)
 # 获取登录cookie
     def get_login_cookie(self):
         return self.driver.get_cookie(name = 'laravel_session')
