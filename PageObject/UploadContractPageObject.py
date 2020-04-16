@@ -15,12 +15,6 @@ class Upload_contract(BasePage):
         self.click_btn(*(contractProtect_elements()[0]))
         sleep(2)
         self.click_btn(*(contractProtect_elements()[5]))
-    # 前端提示信息
-    def upload_page(self):
-        return self.get_text(*(contractProtect_elements()[2]))
-    # 服务器提示信息
-    def upload_server(self):
-        return self.get_text(*(contractProtect_elements()[3]))
     # 保持登录状态
     def keep_login_cookie(self,url):
         return Cookie(self.driver).keep_login(url)

@@ -5,7 +5,7 @@ from Base.GetExcelData import get_excel_data
 from config import readconfig
 from Base.SQLconnect import MySQLUtil
 import unittest
-
+from PageObject.GetToastText import ToastText
 driverbase = DriverBase()
 contract_list_data = get_excel_data('contract_list')
 sql_data = get_excel_data('sql_data')
@@ -17,6 +17,7 @@ class ContractList(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.implicitly_wait(30)
         self.add = Add_Contract(self.driver)
+        self.toast = ToastText(self.driver)
     def tearDown(self):
         driverbase.quit_broswer()
     # 待我确认列表取消确认契约
@@ -44,13 +45,13 @@ class ContractList(unittest.TestCase):
         num_wait_confirm_1 = int(self.add.wait_confirm_num())
         self.add.refuse_ensure(contract_list_data[0]['reason'])
         num_wait_confirm_2 = int(self.add.wait_confirm_num())
-        self.assertEqual(self.add.add_error_sever(),contract_list_data[0]['except_result'])
+        self.assertEqual(self.toast.sever_toast(),contract_list_data[0]['except_result'])
         self.assertEqual(num_wait_confirm_1,num_wait_confirm_2+1)
     # 待我确认列表，确定拒绝契约，内容为空
     def test_refuse_contract_empty(self):
         self.add.select_wait_confirm(readconfig.url_admin)
         self.add.refuse_ensure(contract_list_data[1]['reason'])
-        self.assertEqual(self.add.add_error_sever(), contract_list_data[1]['except_result'])
+        self.assertEqual(self.toast.sever_toast(), contract_list_data[1]['except_result'])
     # 待我确认列表，取消拒绝契约
     def test_cancel_refuse_contract(self):
         self.add.select_wait_confirm(readconfig.url_admin)
@@ -77,12 +78,12 @@ class ContractList(unittest.TestCase):
         self.add.select_wait_appraise(readconfig.url_admin)
         # num_wait_apprise_1 = int(self.add.wait_appraise_num())
         self.add.appraise_cancel_empty(contract_list_data[2]['reason'])
-        self.assertEqual(self.add.add_error_sever(),contract_list_data[2]['except_result'])
+        self.assertEqual(self.toast.sever_toast(),contract_list_data[2]['except_result'])
     # 输入评价内容，不选择评价等级，确认评价
     def test_appraise_empty_grade(self):
         self.add.select_wait_appraise(readconfig.url_admin)
         self.add.appraise_empty_grade(contract_list_data[3]['reason'])
-        self.assertEqual(self.add.add_error_sever(),contract_list_data[3]['except_result'])
+        self.assertEqual(self.toast.sever_toast(),contract_list_data[3]['except_result'])
     # 输入评价内容，选择评价等级，取消评价
     def test_appraise_cancel(self):
         self.add.select_wait_appraise(readconfig.url_admin)

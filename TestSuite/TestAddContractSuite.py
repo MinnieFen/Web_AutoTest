@@ -5,7 +5,7 @@ from Base.GetExcelData import get_excel_data
 from config import readconfig
 from Base.SQLconnect import MySQLUtil
 import unittest
-
+from PageObject.GetToastText import ToastText
 driverbase = DriverBase()
 contract_data = get_excel_data('add_contract')
 sql_data = get_excel_data('sql_data')
@@ -18,6 +18,7 @@ class AddContract(unittest.TestCase):
         self.driver.maximize_window()
         self.driver.implicitly_wait(30)
         self.add = Add_Contract(self.driver)
+        self.toast = ToastText(self.driver)
     def tearDown(self):
         driverbase.quit_broswer()
     # 添加已完成契约，添加成功
@@ -96,7 +97,7 @@ class AddContract(unittest.TestCase):
     def test_add_unfinish_unuser(self):
         try:
             self.add.add_unfinish_contract(readconfig.url_admin, contract_data[5]['company_name'],contract_data[5]['describe'])
-            self.assertEqual(self.add.add_error_sever(),contract_data[5]['except_result'])
+            self.assertEqual(self.toast.sever_toast(),contract_data[5]['except_result'])
         except Exception as msg:
             print(u"异常原因：%s" % msg)
             driverbase.get_screenshot()
@@ -104,7 +105,7 @@ class AddContract(unittest.TestCase):
     def test_add_unfinish_unattestation(self):
         try:
             self.add.add_unfinish_contract(readconfig.url_admin, contract_data[6]['company_name'],contract_data[6]['describe'])
-            self.assertEqual(self.add.add_error_sever(),contract_data[6]['except_result'])
+            self.assertEqual(self.toast.sever_toast(),contract_data[6]['except_result'])
         except Exception as msg:
             print(u"异常原因：%s" % msg)
             driverbase.get_screenshot()

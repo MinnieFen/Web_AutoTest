@@ -35,12 +35,7 @@ class Login(BasePage):
     # 登录成功用户名
     def login_success_username(self):
         return self.get_text(*(login_elements()[5]))
-    # 前端错误信息提示
-    def login_error_page(self):
-        return self.get_text(*(login_elements()[19]))
-    # 服务器信息提示
-    def login_error_sever(self):
-        return self.get_text(*(login_elements()[20]))
+
     # 获取验证码
     def get_code(self,search,table,where):
         return mysql.select(search,table,where)

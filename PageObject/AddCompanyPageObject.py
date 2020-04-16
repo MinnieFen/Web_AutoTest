@@ -33,12 +33,6 @@ class Add_company(BasePage):
     # hearde显示的公司名称
     def companyName(self):
         return self.get_text(*(addCompany_elements()[0]))
-    # 添加公司，服务器报错信息
-    def add_error_sever(self):
-        return self.get_text(*(addCompany_elements()[5]))
-    #添加公司，前端报错信息
-    def add_error_page(self):
-        return self.get_text(*(addCompany_elements()[9]))
     # 获取登录cookie
     def save_login_cookie(self,phone,psw,urlcookie):
         return Cookie(self.driver).save_cookie(phone,psw,urlcookie)

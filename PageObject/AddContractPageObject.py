@@ -52,12 +52,6 @@ class Add_Contract(BasePage):
     # 保持登录状态
     def keep_login_cookie(self,url):
         return Cookie(self.driver).keep_login(url)
-    # 服务器错误提示
-    def add_error_sever(self):
-        return self.get_text(*(addContract_elements()[19]))
-    # 前端错误提示
-    def add_error_page(self):
-        return self.get_text(*(addContract_elements()[20]))
     # 弹框提示对方不是印章用户
     def add_toast(self):
         return self.get_text(*(addContract_elements()[21]))
@@ -126,13 +120,16 @@ class Add_Contract(BasePage):
         self.select_other_use_stamp()
         self.add_contracr_verify()
         sleep(3)
-    # 选择待我确认列表
-    def select_wait_confirm(self,url):
+    # 选择列表
+    def select_list(self,url,listName):
         self.keep_login_cookie(url)
         sleep(3)
         self.contract_list()
         sleep(2)
-        self.click_btn(*(addContract_elements()[24]))
+        self.click_btn(*(addContract_elements()[listName]))
+    # 选择待我确认列表
+    def select_wait_confirm(self,url):
+        self.select_list(url,24)
     # 待我确认数量
     def wait_confirm_num(self):
         return self.get_text(*(addContract_elements()[28]))
@@ -165,11 +162,7 @@ class Add_Contract(BasePage):
         self.click_btn(*(addContract_elements()[39]))
     # 选择待我完成契约列表
     def select_wait_complete(self,url):
-        self.keep_login_cookie(url)
-        sleep(2)
-        self.contract_list()
-        sleep(2)
-        self.click_btn(*(addContract_elements()[25]))
+        self.select_list(url,25)
     # 待我完成列表数量
     def wait_complete_num(self):
         return self.get_text(*(addContract_elements()[29]))
@@ -187,10 +180,7 @@ class Add_Contract(BasePage):
         sleep(2)
     # 选择待我评价列表
     def select_wait_appraise(self,url):
-        self.keep_login_cookie(url)
-        sleep(2)
-        self.contract_list()
-        self.click_btn(*(addContract_elements()[26]))
+        self.select_list(url,26)
         sleep(2)
     # 待我评价列表数量
     def wait_appraise_num(self):
@@ -230,10 +220,7 @@ class Add_Contract(BasePage):
         self.click_btn(*(addContract_elements()[52]))
     # 待对方确认列表
     def select_wait_other_confirm(self,url):
-        self.keep_login_cookie(url)
-        sleep(2)
-        self.contract_list()
-        self.click_btn(*(addContract_elements()[27]))
+        self.select_list(url,27)
         sleep(2)
     # 待对方确认数量
     def wait_other_confirm_num(self):
