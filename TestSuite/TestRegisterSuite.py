@@ -1,16 +1,18 @@
 # coding:utf-8
 import unittest
-from Base.GetExcelData import get_excel_data
+from public.GetExcelData import get_excel_data
 from config import readconfig
 from Base.DriverBase import DriverBase
 from PageObject.LoginPageObject import Login
 from PageObject.AddCompanyPageObject import Add_company
+from public.GetToastText import ToastText
+
 url = readconfig.url_login
 register_data = get_excel_data('register')
 sqldata = get_excel_data('sql_data')
 driverBase = DriverBase()
 companydata = get_excel_data('add_company')
-from PageObject.GetToastText import ToastText
+
 class Test_register(unittest.TestCase):
    def setUp(self):
        self.driver = driverBase.open_broswer()

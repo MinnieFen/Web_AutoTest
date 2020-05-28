@@ -3,9 +3,9 @@ from PageObject.AddCompanyPageObject import Add_company
 from Base.DriverBase import DriverBase
 import unittest
 from config import readconfig
-from Base.GetExcelData import get_excel_data
+from public.GetExcelData import get_excel_data
 from PageObject.LoginPageObject import Login
-from PageObject.GetToastText import ToastText
+from public.GetToastText import ToastText
 driverbase = DriverBase()
 companyName = get_excel_data('add_company')
 logindata = get_excel_data(('register'))

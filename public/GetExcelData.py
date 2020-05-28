@@ -1,5 +1,5 @@
 # coding:utf-8
-from Base.ReadExcel import ReadExcel
+from public.ReadExcel import ReadExcel
 import os
 
 # 调用read_excel方法，直接返回数据列表

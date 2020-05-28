@@ -1,11 +1,11 @@
 # coding:utf-8
 from Base.DriverBase import DriverBase
 from PageObject.AddContractPageObject import Add_Contract
-from Base.GetExcelData import get_excel_data
+from public.GetExcelData import get_excel_data
 from config import readconfig
-from Base.SQLconnect import MySQLUtil
+from public.SQLconnect import MySQLUtil
 import unittest
-from PageObject.GetToastText import ToastText
+from public.GetToastText import ToastText
 driverbase = DriverBase()
 contract_list_data = get_excel_data('contract_list')
 sql_data = get_excel_data('sql_data')

@@ -1,11 +1,7 @@
 # coding:utf-8
-from selenium import webdriver
 from Base.BasePage import BasePage
 from time import sleep
-from Base.SQLconnect import MySQLUtil
 from Base.GetLoginCookie import Cookie
-from config import readconfig
-from PageObject.LoginPageObject import Login
 from selenium.webdriver.common.by import By
 # 添加公司功能的元素定位
 company_list_btn = (By.XPATH, '//*[@class = "company-name"]')  # 0 点击展开公司列表

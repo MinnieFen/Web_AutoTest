@@ -1,10 +1,10 @@
 # coding:utf-8
 import unittest
 from PageObject.LoginPageObject import Login
-from Base.GetExcelData import get_excel_data
+from public.GetExcelData import get_excel_data
 from config import readconfig
 from Base.DriverBase import DriverBase
-from PageObject.GetToastText import ToastText
+from public.GetToastText import ToastText
 url = readconfig.url_login
 logindata = get_excel_data('code_login')
 sqldata = get_excel_data('sql_data')

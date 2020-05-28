@@ -1,12 +1,11 @@
 # coding:utf-8
-from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from config import readconfig
-from Base.GetExcelData import get_excel_data
+from public.GetExcelData import get_excel_data
 from Base.BasePage import BasePage
-from Base.SQLconnect import MySQLUtil
-from PageElements.LoginPageElements import login_elements
+from public.SQLconnect import MySQLUtil
+
 # from Base.DriverBase import start_driver
 mysql = MySQLUtil(db=readconfig.sql_db_qiyuebao)
 sqldata = get_excel_data('sql_data')

@@ -1,8 +1,6 @@
 # coding:utf-8
 import MySQLdb
 from config import readconfig
-from Base.GetExcelData import get_excel_data
-import json
 import ast
 class MySQLUtil():
     def __init__(self,db):

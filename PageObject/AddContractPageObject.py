@@ -123,6 +123,7 @@ class Add_Contract(BasePage):
     # 弹框提示我方不是印章用户
     def add_toast_user(self):
         return self.get_text(*add_toast_user)
+
     # 前端错误提示
     # def contract_error_page(self):
     #     return self.get_text(*add_error_server)
@@ -158,6 +159,11 @@ class Add_Contract(BasePage):
         self.contract_describe(contract_word)
         self.select_unfinish_contract()
         self.select_use_stamp()
+        # self.add_contracr_verify()
+        sleep(3)
+    #添加未完成契约，选择我方使用访问i印章，确认添加
+    def add_unfinish_use_verify(self,url,companyName,contract_word):
+        self.add_unfinish_use_stamp(url,companyName,contract_word)
         self.add_contracr_verify()
         sleep(3)
     # 添加未完成契约，选择对方使用防伪印章
@@ -170,6 +176,11 @@ class Add_Contract(BasePage):
         self.contract_describe(contract_word)
         self.select_unfinish_contract()
         self.select_other_use_stamp()
+        # self.add_contracr_verify()
+        sleep(3)
+    # 添加未完成契约，选择对方使用防伪印章，确认添加
+    def add_unfinish_other_verify(self,url,companyName,contract_word):
+        self.add_unfinish_other_use_stamp(url,companyName,contract_word)
         self.add_contracr_verify()
         sleep(3)
     # 添加未完成契约，双方都使用防伪印章

@@ -1,11 +1,11 @@
 # coding:utf-8
 import unittest
 from PageObject.UploadContractPageObject import Upload_contract
-from Base.GetExcelData import get_excel_data
+from public.GetExcelData import get_excel_data
 from config import readconfig
 from Base.DriverBase import DriverBase
-from Base.SQLconnect import MySQLUtil
-from PageObject.GetToastText import ToastText
+from public.SQLconnect import MySQLUtil
+from public.GetToastText import ToastText
 driverbase = DriverBase()
 uploaddata = get_excel_data(('upload_contract'))
 sql_data = get_excel_data('sql_data')
