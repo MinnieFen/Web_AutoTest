@@ -13,13 +13,26 @@ mysql = MySQLUtil(db=readconfig.sql_db_qiyuebao)
 mysql_yx = MySQLUtil(db=readconfig.sql_db_yx)
 
 class AddContract(unittest.TestCase):
-    def setUp(self):
-        self.driver = driverbase.open_broswer()
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(30)
-        self.add = Add_Contract(self.driver)
-        self.toast = ToastText(self.driver)
-    def tearDown(self):
+# 每执行一个用例，都要启动和关闭浏览器
+    # def setUp(self):
+    #     self.driver = driverbase.open_broswer()
+    #     self.driver.maximize_window()
+    #     self.driver.implicitly_wait(30)
+    #     self.add = Add_Contract(self.driver)
+    #     self.toast = ToastText(self.driver)
+    # def tearDown(self):
+    #     driverbase.quit_broswer()
+
+# 启动一次浏览器，用例都执行完后，关闭浏览器
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = driverbase.open_broswer()
+        cls.driver.maximize_window()
+        cls.driver.implicitly_wait(30)
+        cls.add = Add_Contract(cls.driver)
+        cls.toast = ToastText(cls.driver)
+    @classmethod
+    def tearDownClass(cls):
         driverbase.quit_broswer()
     # 添加已完成契约，添加成功
     def test_add_finish_contract(self):
@@ -128,15 +141,15 @@ class AddContract(unittest.TestCase):
         # except Exception as msg:
         #     print(u"异常原因：%s" % msg)
         #     driverbase.get_screenshot()
-if __name__ == '__main__':
-    suite = unittest.TestSuite()
-    # suite.addTest(AddContract('test_add_finish_contract'))
-    # suite.addTest(AddContract('test_add_unfinish_contract'))
-    # suite.addTest(AddContract('test_add_unfinish_usestamp'))
-    # suite.addTest(AddContract('test_add_unfinish_other_usestamp'))
-    # suite.addTest(AddContract('test_add_unfinish_all_usestamp'))
-    # suite.addTest(AddContract('test_add_unfinish_unuser'))
-    # suite.addTest(AddContract('test_add_unfinish_unattestation'))
-    # suite.addTest(AddContract('test_add_unfinish_other_unstamp'))
-    # suite.addTest(AddContract('test_add_unfinish_unstamp'))
-    unittest.TextTestRunner().run(suite)
+# if __name__ == '__main__':
+#     suite = unittest.TestSuite()
+#     suite.addTest(AddContract('test_add_finish_contract'))
+#     suite.addTest(AddContract('test_add_unfinish_contract'))
+#     suite.addTest(AddContract('test_add_unfinish_usestamp'))
+#     suite.addTest(AddContract('test_add_unfinish_other_usestamp'))
+#     suite.addTest(AddContract('test_add_unfinish_all_usestamp'))
+#     suite.addTest(AddContract('test_add_unfinish_unuser'))
+#     suite.addTest(AddContract('test_add_unfinish_unattestation'))
+#     suite.addTest(AddContract('test_add_unfinish_other_unstamp'))
+#     suite.addTest(AddContract('test_add_unfinish_unstamp'))
+#     unittest.TextTestRunner().run(suite)

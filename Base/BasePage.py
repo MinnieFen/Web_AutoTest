@@ -10,6 +10,28 @@ class BasePage(object):
 # 窗口最大化
     def max_window(self):
         self.driver.maximize_window()
+# # 定位元素方法
+#     def locate_element(self, locatetype, value):
+#         if locatetype == 'id':
+#             el = self.driver.find_element_by_id(value)
+#         if locatetype == 'name':
+#             el = self.driver.find_element_by_name(value)
+#         if locatetype == 'class_name':
+#             el = self.driver.find_element_by_class_name(value)
+#         if locatetype == 'tag_name':
+#             el = self.driver.find_element_by_tag_name(value)
+#         if locatetype == 'link':
+#             el = self.driver.find_element_by_tag_name(value)
+#         if locatetype == 'partial_link':
+#             el = self.driver.find_element_by_partial_link_text(value)
+#         if locatetype == 'css':
+#             el = self.driver.find_element_by_css_selector(value)
+#         if locatetype == 'xpath':
+#             el = self.driver.find_element_by_xpath(value)
+#         return el if el else None
+# #点击元素
+#     def click_btn(self,locatetype,value):
+#         return self.locate_element(locatetype,value).click()
 # 定位元素
     def find_web_element(self, *loc):
         return self.driver.find_element(*loc)

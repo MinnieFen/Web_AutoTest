@@ -66,10 +66,10 @@ wait_other_confirm_delet = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/
 delet_cancel = (By.XPATH, ('//*[@id="cancelbtn"]'))  # 56 取消删除
 delet_ensure = (By.XPATH, ('//*[@id="confimbtn"]'))  # 57 确认删除
 # describe_text = (By.LINK_TEXT('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[5]/div[1]/p[2]'))                      # 58 获取待确认列表描述内容
-all_list_pages = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li/a'))  # 52 获取分页总数
-all_list_last_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[1]/a/span'))  # 53 上一页按钮
-all_list_next_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[5]/a/span'))  # 54 下一页按钮
-all_list_page_num = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/div'))  # 55 获取一页的总数
+all_list_pages = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li/a'))  # 59 获取分页总数
+all_list_last_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[1]/a/span'))  # 60 上一页按钮
+all_list_next_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[5]/a/span'))  # 61 下一页按钮
+all_list_page_num = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/div'))  # 62 获取一页的总数
 
 class Add_Contract(BasePage):
     # 点击侧边栏我的契约
@@ -161,7 +161,7 @@ class Add_Contract(BasePage):
         self.select_use_stamp()
         # self.add_contracr_verify()
         sleep(3)
-    #添加未完成契约，选择我方使用访问i印章，确认添加
+    #添加未完成契约，选择我方使用防伪印章，确认添加
     def add_unfinish_use_verify(self,url,companyName,contract_word):
         self.add_unfinish_use_stamp(url,companyName,contract_word)
         self.add_contracr_verify()
