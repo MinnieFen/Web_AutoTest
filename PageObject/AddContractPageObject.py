@@ -7,7 +7,7 @@ from config import readconfig
 from selenium.webdriver.common.by import By
 
 my_contract_list = (By.XPATH, ('/html/body/div[1]/div[1]/div/nav/ul/li[4]/a/span'))  # 0 侧边栏 我的契约
-add_contract_btn = (By.XPATH, ('//*[@class = "btn btn-primary"]'))  # 1 我的契约按钮
+add_contract_btn = (By.XPATH, ('//*[@class = "btn btn-primary"]'))  # 1 添加契约按钮
 company_input_word = (By.XPATH, ('//*[@id="company-input"]'))  # 2 对方公司输入框
 search_btn = (By.XPATH, ('//*[@class = "ui-button company-button"]'))  # 3 搜索按钮
 select_company = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[4]/div[1]/div[2]/ul/li[1]/a'))  # 4 选择第一个公司
@@ -86,9 +86,9 @@ class Add_Contract(BasePage):
         self.click_btn(*search_btn)
         sleep(3)
         self.click_btn(*select_company)       # 选择第一个公司
-        self.click_btn(*contract_time_word)       # 选择12月
+        self.click_btn(*contract_time_word)       # 点击契约月份选择框
         sleep(2)
-        self.click_btn(*contract_time_btn)
+        self.click_btn(*contract_time_btn)       # 选择12月
         sleep(2)
     # 输入契约描述
     def contract_describe(self,contract_word):
@@ -96,12 +96,12 @@ class Add_Contract(BasePage):
     # 选择已完成契约，选择评价等级
     def select_finish_contracr(self,contract_appraise):
         self.click_btn(*contract_finish_btn)
-        self.send_word(contract_appraise,*contract_appraise_word)
-        self.click_btn(*attitude)
-        self.click_btn(*quality)
-        self.click_btn(*efficiency)
-        self.click_btn(*credit)
-        self.click_btn(*specialty)
+        self.send_word(contract_appraise,*contract_appraise_word)       # 输入契约评价内容
+        self.click_btn(*attitude)            # 态度1星评价
+        self.click_btn(*quality)             # 质量2星评价
+        self.click_btn(*efficiency)          # 效率3星评价
+        self.click_btn(*credit)              # 守信4星评价
+        self.click_btn(*specialty)           # 专业5星评价
     # 选择未完成契约
     def select_unfinish_contract(self):
         self.click_btn(*contract_unfinish_btn)
@@ -140,9 +140,9 @@ class Add_Contract(BasePage):
         sleep(2)
     # 添加未完成契约,未选择防伪印章
     def add_unfinish_contract(self,url,companyName,contract_word):
-        self.keep_login_cookie(url)
-        sleep(2)
-        self.contract_list()
+        # self.keep_login_cookie(url)
+        # sleep(2)
+        # self.contract_list()
         self.add_contract_btn()
         self.company_name(companyName)
         self.contract_describe(contract_word)
@@ -151,9 +151,10 @@ class Add_Contract(BasePage):
         sleep(3)
     # 添加未完成契约，选择我方使用防伪印章
     def add_unfinish_use_stamp(self,url,companyName,contract_word):
-        self.keep_login_cookie(url)
-        sleep(2)
-        self.contract_list()
+        # self.keep_login_cookie(url)
+        # sleep(2)
+        # self.contract_list()
+        self.refresh_window()
         self.add_contract_btn()
         self.company_name(companyName)
         self.contract_describe(contract_word)
@@ -168,9 +169,9 @@ class Add_Contract(BasePage):
         sleep(3)
     # 添加未完成契约，选择对方使用防伪印章
     def add_unfinish_other_use_stamp(self,url,companyName,contract_word):
-        self.keep_login_cookie(url)
-        sleep(2)
-        self.contract_list()
+        # self.keep_login_cookie(url)
+        # sleep(2)
+        # self.contract_list()
         self.add_contract_btn()
         self.company_name(companyName)
         self.contract_describe(contract_word)
@@ -185,9 +186,9 @@ class Add_Contract(BasePage):
         sleep(3)
     # 添加未完成契约，双方都使用防伪印章
     def add_unfinish_all_use_stamp(self,url,companyName,contract_word):
-        self.keep_login_cookie(url)
-        sleep(2)
-        self.contract_list()
+        # self.keep_login_cookie(url)
+        # sleep(2)
+        # self.contract_list()
         self.add_contract_btn()
         self.company_name(companyName)
         self.contract_describe(contract_word)

@@ -28,10 +28,12 @@ register_code_word = (By.XPATH, '//*[@id = "v-code-input"]')  # 14输入注册�
 agree_deal_btn = (By.XPATH, '//*[@class = "ui-checkbox wyydfwxy"]')  # 15勾选同意服务协议框
 confirm_register_btn = (By.XPATH, '//*[@id = "register-button"]')  # 16确定注册按钮
 back_to_homepage = (By.XPATH, '/html/body/nav/div/div[1]/a/span/span[1]')  # 17返回首页
-logout_btn = (By.XPATH, '/html/body/nav/div/div[2]/ul/li[2]/ul/li[4]/a')  # 18点击退出按钮
+logout_btn = (By.XPATH, '//*[@id="muenCloumn"]/li[2]/ul/li[4]/a')  # 18点击退出按钮
 login_error_page = (By.CSS_SELECTOR, '.ui-tips-before')  # 19前端页面错误信息提示
 login_error_server = (By.XPATH, '//*[@class = "layui-layer-content"]')  # 20服务器错误信息提示
 register_heard_btn = (By.XPATH, '/html/body/nav/div/div[2]/ul/li[3]/a')  # 21 heard处企业注册按钮
+user_name_btn = (By.XPATH,'//*[@id="muenCloumn"]/li[2]/a')     # 点击用户昵称
+
 
 class Login(BasePage):
     # 跳转到登录页面
@@ -73,7 +75,7 @@ class Login(BasePage):
         self.login_psw(inputPsw)
         self.login_button()
         sleep(2)
-    # 验证码登录
+    # 验证码登录，获取验证码
     def send_code_login(self,url,inputPhone):
         self.open_url(url)
         self.login_page()
@@ -81,11 +83,13 @@ class Login(BasePage):
         self.login_phone(inputPhone)
         self.click_btn(*get_code_btn)
         sleep(3)
+    # 验证码登录，输入验证码
     def code_login(self,code):
-        self.login_psw(code)
-        self.login_button()
+        self.login_psw(code)              #  输入验证码
+        self.login_button()               #  点击登录按钮
         sleep(2)
-    # 忘记密码
+
+    # 进入忘记密码页面，输入手机号，获取验证码
     def send_code_reset(self,url,inputPhone):
         self.open_url(url)
         self.login_page()
@@ -93,6 +97,7 @@ class Login(BasePage):
         self.login_phone(inputPhone)
         self.click_code()
         sleep(3)
+    # 重置密码，输入验证码，新密码，确定重置密码
     def psw_reset(self,code,new_psw):
         self.login_psw(code)
         self.send_word(new_psw,*new_psw_word)
@@ -106,25 +111,34 @@ class Login(BasePage):
         self.open_url(url)
         self.login_page()
         self.click_btn(*register_page_btn)
-    def send_code(self,phone,psw,name):
+    def send_code(self,phone,psw,name):   #   输入注册手机号、密码、姓名
         self.send_word(phone, *register_phone_word)
         self.send_word(psw, *register_psw_word)
         self.send_word(name, *register_name_word)
-        self.click_btn(*register_code_btn)
+        self.click_btn(*register_code_btn)           # 点击获取验证码
         sleep(5)
+    # 点击heard注册按钮进入注册页面，输入手机号、密码、姓名
     def send_code_register_heard(self,url,phone,psw,name):
         self.register_heard(url)
         self.send_code(phone,psw,name)
+    # 登录页面注册按钮，进入注册页面，输入手机号、密码、姓名
     def send_code_register_loginpage(self,url,phone,psw,name):
         self.register_loginpage(url)
         self.send_code(phone,psw,name)
+    # 输入注册验证码
     def wirte_code_register(self,code):
         self.send_word(code,*register_code_word)
+    # 勾选服务协议
     def select_deal(self):
         self.click_btn(*agree_deal_btn)
+    # 点击注册按钮
     def register(self):
         self.click_btn(*confirm_register_btn)
         sleep(3)
+    # 退出登录
+    def logout(self):
+        self.click_btn(*user_name_btn)
+        self.click_btn(*logout_btn)
 # if __name__ == '__main__':
 #     login = Login(driver=webdriver.Firefox())
 #     login.psw_login('18782038145','a123456','http://qiyuebao-t.yunxitech.cn/')

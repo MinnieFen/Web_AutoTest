@@ -8,22 +8,36 @@ from public.GetToastText import ToastText
 url = readconfig.url_login
 logindata = get_excel_data('code_login')
 sqldata = get_excel_data('sql_data')
-driverBase = DriverBase()
+driverbase = DriverBase()
 class Test_code_login(unittest.TestCase):
-   def setUp(self):
-       self.driver = driverBase.open_broswer()
-       driverBase.max_window()
-       self.login = Login(self.driver)
-       self.driver.implicitly_wait(10)
-       self.toast = ToastText(self.driver)
-   def tearDown(self):
-       driverBase.quit_broswer()
+   # def setUp(self):
+   #     self.driver = driverbase.open_broswer()
+   #     driverbase.max_window()
+   #     self.login = Login(self.driver)
+   #     self.driver.implicitly_wait(10)
+   #     self.toast = ToastText(self.driver)
+   # def tearDown(self):
+   #     driverbase.quit_broswer()
+
+   # 启动一次浏览器，用例都执行完后，关闭浏览器
+   @classmethod
+   def setUpClass(cls):
+       cls.driver = driverbase.open_broswer()
+       cls.driver.maximize_window()
+       cls.driver.implicitly_wait(30)
+       cls.login = Login(cls.driver)
+       cls.toast = ToastText(cls.driver)
+
+   @classmethod
+   def tearDownClass(cls):
+       driverbase.quit_broswer()
    def test_code_login_success(self):
        '''账号验证码正确登录'''
        self.login.send_code_login(url,logindata[0]['phone'])
        codes = self.login.get_code(sqldata[4]['set or search'],sqldata[4]['table'],sqldata[4]['where'])
        self.login.code_login(codes[0])
        self.assertEqual(self.login.login_success_username(),logindata[0]['except_result'])
+       self.login.logout()
    def test_code_login_nullcode(self):
        '''账号正确，验证码为空登录'''
        self.login.send_code_login(url,logindata[1]['phone'])
@@ -45,11 +59,11 @@ class Test_code_login(unittest.TestCase):
        codes = self.login.get_code(sqldata[4]['set or search'],sqldata[4]['table'],sqldata[4]['where'])
        self.login.code_login(codes[0])
        self.assertEqual(self.login.login_success_username(),logindata[4]['except_result'])
-# if __name__ == '__main__':
-#     suite = unittest.TestSuite()
-#     suite.addTest(Test_code_login('test_code_login_success'))
-#     suite.addTest(Test_code_login('test_code_login_nullcode'))
+if __name__ == '__main__':
+    suite = unittest.TestSuite()
+    suite.addTest(Test_code_login('test_code_login_success'))
+    suite.addTest(Test_code_login('test_code_login_nullcode'))
 #     suite.addTest(Test_code_login('test_code_login_allnull'))
 #     suite.addTest(Test_code_login('test_code_login_mismatch'))
 #     suite.addTest(Test_code_login('test_code_login_newphone'))
-#     unittest.TextTestRunner().run(suite)
+    unittest.TextTestRunner().run(suite)

@@ -6,6 +6,7 @@ from config import readconfig
 from public.SQLconnect import MySQLUtil
 import unittest
 from public.GetToastText import ToastText
+
 driverbase = DriverBase()
 contract_data = get_excel_data('add_contract')
 sql_data = get_excel_data('sql_data')
@@ -131,25 +132,26 @@ class AddContract(unittest.TestCase):
             print(u"异常原因：%s" % msg)
             driverbase.get_screenshot()
     # 添加未完成契约，我方不是印章用户，我方使用印章
-    def test_add_unfinish_unstamp(self):
 
+    def test_add_unfinish_unstamp(self):
         mysql.update(sql_data[0]['table'], sql_data[0]['set or search'], sql_data[0]['where'])          # 修改当前公司字段为0
         mysql.update(sql_data[14]['table'], sql_data[14]['set or search'],sql_data[14]['where'])        # 更新 福建中鑫华为科技有限公司为当前公司,非印章用户
+        # driverbase.refresh_window()                                                                     # 刷新页面，更新页面获取的当前公司
         self.add.add_unfinish_use_stamp(readconfig.url_admin,contract_data[8]['company_name'],contract_data[8]['describe'])
-        # self.assertEqual(self.add.add_toast_user(),contract_data[8]['except_result'])
+        self.assertEqual(self.add.add_toast_user(),contract_data[8]['except_result'])
         mysql.mysql_close()
         # except Exception as msg:
         #     print(u"异常原因：%s" % msg)
         #     driverbase.get_screenshot()
 # if __name__ == '__main__':
-#     suite = unittest.TestSuite()
-#     suite.addTest(AddContract('test_add_finish_contract'))
-#     suite.addTest(AddContract('test_add_unfinish_contract'))
-#     suite.addTest(AddContract('test_add_unfinish_usestamp'))
-#     suite.addTest(AddContract('test_add_unfinish_other_usestamp'))
-#     suite.addTest(AddContract('test_add_unfinish_all_usestamp'))
-#     suite.addTest(AddContract('test_add_unfinish_unuser'))
-#     suite.addTest(AddContract('test_add_unfinish_unattestation'))
-#     suite.addTest(AddContract('test_add_unfinish_other_unstamp'))
-#     suite.addTest(AddContract('test_add_unfinish_unstamp'))
-#     unittest.TextTestRunner().run(suite)
+    # suite = unittest.TestSuite()
+    # suite.addTest(AddContract('test_add_finish_contract'))
+    # suite.addTest(AddContract('test_add_unfinish_contract'))
+    # suite.addTest(AddContract('test_add_unfinish_usestamp'))
+    # suite.addTest(AddContract('test_add_unfinish_other_usestamp'))
+    # suite.addTest(AddContract('test_add_unfinish_all_usestamp'))
+    # suite.addTest(AddContract('test_add_unfinish_unuser'))
+    # suite.addTest(AddContract('test_add_unfinish_unattestation'))
+    # suite.addTest(AddContract('test_add_unfinish_other_unstamp'))
+    # suite.addTest(AddContract('test_add_unfinish_unstamp'))
+    # unittest.TextTestRunner().run(suite)

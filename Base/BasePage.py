@@ -60,6 +60,10 @@ class BasePage(object):
 # 添加cookie
     def add_cookie(self,cookie):
         return self.driver.add_cookie(cookie)
+# 刷新页面
+    def refresh_window(self):
+        self.driver.refresh()
+        sleep(2)
 
 # if __name__ == '__main__':
 #     url = 'http://qiyuebao-t.yunxitech.cn/'
