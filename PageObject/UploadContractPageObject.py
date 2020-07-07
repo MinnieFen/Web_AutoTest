@@ -14,13 +14,14 @@ search_word = (By.XPATH, '//*[@class = "cc-search-input"]')  # 6 搜索文档框
 search_btn = (By.XPATH, '//*[@id = "cc-search-button"]')  # 7 搜索按钮
 search_list = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[4]/div[2]/div/div/div/div'))  # 8 获取搜索列表数据
 search_empty = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[4]/div[2]/div/p'))  # 9 搜索结果无数据
+upload_toast = (By.XPATH,( '//*[@id="wrapper"]/div[2]/div/div/div/div[3]/div[4]/div/div[2]/div[1]/p/span'))
 
 class Upload_contract(BasePage):
     # 进入选择文件页面
     def contract_protect_list(self,path):
         self.click_btn(*contract_protect_list)
-        self.click_btn(*select_contract_btn)
-        self.send_word(path,*upload_contract)
+        # self.click_btn(*select_contract_btn)     # 使用send_keys上传文件的方法，不需要再去操作点击上传，否则上传文件弹框会多显示一个
+        self.select_file(path,*upload_contract)
     # 进入查看已保护文档页面
     def contracted_page(self):
         self.click_btn(*contract_protect_list)
@@ -55,3 +56,7 @@ class Upload_contract(BasePage):
     # 搜索结果无数据时，获取页面文本
     def search_empty_data(self):
         return self.get_text(*search_empty)
+
+    # 上传文件后，弹框提示信息
+    def upload_page_toast(self):
+        return self.get_text(*upload_toast)

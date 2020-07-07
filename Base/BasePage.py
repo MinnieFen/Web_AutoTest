@@ -64,6 +64,9 @@ class BasePage(object):
     def refresh_window(self):
         self.driver.refresh()
         sleep(2)
+# 上传文件
+    def select_file(self,files,*loc):
+        return self.driver.find_element(*loc).send_keys(files)     # 对input进行send_keys（） 不需要再去操作点击上传按钮，会导致多余的选择文件弹框出现
 
 # if __name__ == '__main__':
 #     url = 'http://qiyuebao-t.yunxitech.cn/'
