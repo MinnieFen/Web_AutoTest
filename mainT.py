@@ -67,13 +67,6 @@ if __name__ == '__main__':
     for i in all_case:
         run_case(i)
 
-# 多线程运行用例
-    #用例集合
-    # cases = add_case()
-    # # for循环执行
-    # for i in zip(cases,range(len(list(cases)))):
-    #     run_case(i)   # 执行用例，生成报告
-
 #获取最新的测试报告
     report_path = os.path.join(cur_path,'report')
     report_file = get_report_file(report_path)

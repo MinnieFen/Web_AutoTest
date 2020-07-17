@@ -70,14 +70,24 @@ class UploadContract(unittest.TestCase):
         self.upload.search(readconfig.url_admin,uploaddata[7]['path'])
         self.upload.search_result()
         self.assertEqual(self.upload.search_empty_data(),uploaddata[7]['except_result'])
+    # 下载文档
+    def download_files(self):
+        self.upload.download_file(readconfig.url_admin)
+    # 查看保全信息
+    def message(self):
+        self.upload.protect_message(readconfig.url_admin)
+        driverbase.get_screenshot()
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    suite.addTest(UploadContract('upload_pdf'))
-    suite.addTest(UploadContract('upload_doc'))
+    # suite.addTest(UploadContract('upload_pdf'))
+    # suite.addTest(UploadContract('upload_doc'))
     # suite.addTest(UploadContract('upload_docx'))
     # suite.addTest(UploadContract('upload_75pages'))
     # suite.addTest(UploadContract('upload_empty_page'))
     # suite.addTest(UploadContract('upload_error_format'))
     # suite.addTest(UploadContract('search_doc'))
     # suite.addTest((UploadContract('search_empty_doc')))
+    suite.addTest(UploadContract('download_files'))
+    suite.addTest(UploadContract('message'))
+
     unittest.TextTestRunner().run(suite)

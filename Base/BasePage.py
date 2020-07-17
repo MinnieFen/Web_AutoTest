@@ -51,9 +51,12 @@ class BasePage(object):
     def clear_word(self,*loc):
         return self.driver.find_element(*loc).clear()
 # 元素聚焦
-    def ele_target(self,*loc):
-        target = self.driver.find_element(*loc)
-        self.driver.execute_script("arguments[0].scrollIntoView();",target)
+    def ele_target(self):
+        # target = self.driver.find_element(*loc)
+        js = 'document.documentElement.scrollTop=10000'
+        # self.driver.execute_script("arguments[0].scrollIntoView();",target)
+        self.driver.execute_script(js)
+
 # 获取登录cookie
     def get_login_cookie(self):
         return self.driver.get_cookie(name = 'laravel_session')

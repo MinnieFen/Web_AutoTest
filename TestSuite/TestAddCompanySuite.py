@@ -49,20 +49,21 @@ class AddCompany(unittest.TestCase):
         self.add.add_company_education(companyName[5]['name'],readconfig.url_admin)
         self.assertEqual(self.toast.sever_toast(),companyName[5]['except_result'])
         self.add.cancel_add_company()
-    # 新账号首次添加公司，需要关闭浏览器，重新打开？？？
-    # def test_first_addcompany(self):
-    #     self.login.psw_login(logindata[0]['phone'],logindata[0]['psw'],readconfig.url_login)
-    #     self.add.first_login()
-    #     self.add.add_companyName(companyName[7]['name'])
-    #     self.add.add_company_verify()
-    #     self.assertEqual(self.add.companyName(),companyName[7]['except_result'])
+        self.login.logout_userpage()     # 这条用例退出登录，为了下一条用例重新登录
+    # 新账号首次添加公司
+    def test_first_addcompany(self):
+        self.login.psw_login(logindata[0]['phone'],logindata[0]['psw'],readconfig.url_login)
+        self.add.first_login()
+        self.add.add_companyName(companyName[7]['name'])
+        self.add.add_company_verify()
+        self.assertEqual(self.add.companyName(),companyName[7]['except_result'])
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-#     suite.addTest(AddCompany('test_add_nullname'))
+    suite.addTest(AddCompany('test_add_nullname'))
 #     suite.addTest(AddCompany('test_default_vocation'))
 #     suite.addTest(AddCompany('test_select_education'))
-    suite.addTest(AddCompany('test_select_waterboard'))
-    suite.addTest(AddCompany('test_exist_company'))
-#     suite.addTest((AddCompany('test_attestation_company')))
-#     suite.addTest((AddCompany('test_first_addcompany')))
+#     suite.addTest(AddCompany('test_select_waterboard'))
+    # suite.addTest(AddCompany('test_exist_company'))
+    suite.addTest((AddCompany('test_attestation_company')))
+    # suite.addTest((AddCompany('test_first_addcompany')))
     unittest.TextTestRunner().run(suite)

@@ -5,6 +5,7 @@ from Base.GetLoginCookie import Cookie
 from selenium import webdriver
 from config import readconfig
 from selenium.webdriver.common.by import By
+import logging
 
 my_contract_list = (By.XPATH, ('/html/body/div[1]/div[1]/div/nav/ul/li[4]/a/span'))  # 0 侧边栏 我的契约
 add_contract_btn = (By.XPATH, ('//*[@class = "btn btn-primary"]'))  # 1 添加契约按钮
@@ -70,6 +71,9 @@ all_list_pages = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div
 all_list_last_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[1]/a/span'))  # 60 上一页按钮
 all_list_next_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[5]/a/span'))  # 61 下一页按钮
 all_list_page_num = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/div'))  # 62 获取一页的总数
+
+page_tag1 = (By.XPATH,'/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul')
+page_tag2 = 'a'
 
 class Add_Contract(BasePage):
     # 点击侧边栏我的契约
@@ -329,11 +333,31 @@ class Add_Contract(BasePage):
     # 待确认列表，描述内容
     # def waitconfirm_text(self):
         # self.get_text(*(addContract_elements()[58]))
-# if __name__ == '__main__':
-    # con = Add_Contract(driver=webdriver.Firefox())
+
+    # 获取契约列表的总页数
+    def get_pages(self,url,listName):
+        self.select_list(url,listName)
+        total_pages = self.find_web_element(*page_tag1).find_elements_by_tag_name(page_tag2)   # 连续定位，第二个直接调用 find_web_elements 会报错，暂时只能直接使用定位方法
+        self.ele_target()
+        # print(total_pages)
+        return total_pages
+
+    def operate_page(self,totalpages):
+        if totalpages == 1:
+            logging.info('当前只有一页，无需翻页')
+        else:
+            logging.info('当前共有%s页' %totalpages)
+            for page in  totalpages:
+                page.click()
+                sleep(2)
+if __name__ == '__main__':
+    con = Add_Contract(driver=webdriver.Firefox())
 #     companyName = '千帆渡'
 #     contract_word = '这是契约描述'
 #     contract_appraise = '这是契约评价'
-#     url = readconfig.url_admin
-#     con.add_finish_contract(companyName,contract_word,contract_appraise,url)
+    url = readconfig.url_admin
+    listName = wait_confirm
+    page = con.get_pages(url,listName)
+    con.operate_page(page)
+    # con.add_finish_contract(companyName,contract_word,contract_appraise,url)
 #     con.confirm_ensure(url)

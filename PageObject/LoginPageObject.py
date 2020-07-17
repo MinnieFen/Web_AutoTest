@@ -28,11 +28,14 @@ register_code_word = (By.XPATH, '//*[@id = "v-code-input"]')  # 14输入注册�
 agree_deal_btn = (By.XPATH, '//*[@class = "ui-checkbox wyydfwxy"]')  # 15勾选同意服务协议框
 confirm_register_btn = (By.XPATH, '//*[@id = "register-button"]')  # 16确定注册按钮
 back_to_homepage = (By.XPATH, '/html/body/nav/div/div[1]/a/span/span[1]')  # 17返回首页
-logout_btn = (By.XPATH, '//*[@id="muenCloumn"]/li[2]/ul/li[4]/a')  # 18点击退出按钮
+logout_btn_1 = (By.XPATH, '//*[@id="muenCloumn"]/li[2]/ul/li[4]/a')  # 18首页点击退出按钮
 login_error_page = (By.CSS_SELECTOR, '.ui-tips-before')  # 19前端页面错误信息提示
 login_error_server = (By.XPATH, '//*[@class = "layui-layer-content"]')  # 20服务器错误信息提示
 register_heard_btn = (By.XPATH, '/html/body/nav/div/div[2]/ul/li[3]/a')  # 21 heard处企业注册按钮
-user_name_btn = (By.XPATH,'//*[@id="muenCloumn"]/li[2]/a')     # 点击用户昵称
+user_name_btn_1 = (By.XPATH,'//*[@id="muenCloumn"]/li[2]/a')     # 点击用户昵称
+login_btn_2 = (By.XPATH,'//*[@id="navbar-menu"]/ul/li[3]/ul/li[4]/a/span')    #个人中心页面点击退出按钮
+user_name_btn_2 = (By.XPATH,'//*[@id="userName"]')       # 个人中心页面点击用户昵称
+
 
 
 class Login(BasePage):
@@ -135,10 +138,14 @@ class Login(BasePage):
     def register(self):
         self.click_btn(*confirm_register_btn)
         sleep(3)
-    # 退出登录
+    # 首页退出登录
     def logout(self):
-        self.click_btn(*user_name_btn)
-        self.click_btn(*logout_btn)
+        self.click_btn(*user_name_btn_1)
+        self.click_btn(*logout_btn_1)
+    # 个人中心页面退出登录
+    def logout_userpage(self):
+        self.click_btn(*user_name_btn_2)
+        self.click_btn(*login_btn_2)
 # if __name__ == '__main__':
 #     login = Login(driver=webdriver.Firefox())
 #     login.psw_login('18782038145','a123456','http://qiyuebao-t.yunxitech.cn/')
