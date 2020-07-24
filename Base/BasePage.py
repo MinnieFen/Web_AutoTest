@@ -53,8 +53,8 @@ class BasePage(object):
 # 元素聚焦
     def ele_target(self):
         # target = self.driver.find_element(*loc)
-        js = 'document.documentElement.scrollTop=10000'
         # self.driver.execute_script("arguments[0].scrollIntoView();",target)
+        js = 'var q = document.documentElement.scrollTop=10000'
         self.driver.execute_script(js)
 
 # 获取登录cookie
@@ -70,7 +70,9 @@ class BasePage(object):
 # 上传文件
     def select_file(self,files,*loc):
         return self.driver.find_element(*loc).send_keys(files)     # 对input进行send_keys（） 不需要再去操作点击上传按钮，会导致多余的选择文件弹框出现
-
+#获取当前的浏览器窗口
+    def get_handle(self):
+        return self.driver.current_window_handle
 # if __name__ == '__main__':
 #     url = 'http://qiyuebao-t.yunxitech.cn/'
 #     d = webdriver.Firefox()

@@ -67,7 +67,6 @@ wait_other_confirm_delet = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/
 delet_cancel = (By.XPATH, ('//*[@id="cancelbtn"]'))  # 56 取消删除
 delet_ensure = (By.XPATH, ('//*[@id="confimbtn"]'))  # 57 确认删除
 # describe_text = (By.LINK_TEXT('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[5]/div[1]/p[2]'))                      # 58 获取待确认列表描述内容
-all_list_pages = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li/a'))  # 59 获取分页总数
 all_list_last_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[1]/a/span'))  # 60 上一页按钮
 all_list_next_page = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul/li[5]/a/span'))  # 61 下一页按钮
 all_list_page_num = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/div'))  # 62 获取一页的总数
@@ -337,27 +336,31 @@ class Add_Contract(BasePage):
     # 获取契约列表的总页数
     def get_pages(self,url,listName):
         self.select_list(url,listName)
-        total_pages = self.find_web_element(*page_tag1).find_elements_by_tag_name(page_tag2)   # 连续定位，第二个直接调用 find_web_elements 会报错，暂时只能直接使用定位方法
-        self.ele_target()
-        # print(total_pages)
+        self.ele_target()                   # 调用元素聚焦方法
+        total_pages = len(self.find_web_element(*page_tag1).find_elements_by_tag_name(page_tag2))       # 连续定位，第二个直接调用 find_web_elements 会报错，暂时只能直接使用定位方法
+        print(total_pages)
         return total_pages
+    # 操作下一页
+    def operate_page(self):
+        pages = self.find_web_element(*page_tag1).find_elements_by_tag_name(page_tag2)
+        print(pages)
+        # self.ele_target()
+        self.get_handle()
+        sleep(5)
+        for page in pages:
+            # self.ele_target()
+            page.click()
+            sleep(3)
 
-    def operate_page(self,totalpages):
-        if totalpages == 1:
-            logging.info('当前只有一页，无需翻页')
-        else:
-            logging.info('当前共有%s页' %totalpages)
-            for page in  totalpages:
-                page.click()
-                sleep(2)
+
 if __name__ == '__main__':
     con = Add_Contract(driver=webdriver.Firefox())
 #     companyName = '千帆渡'
 #     contract_word = '这是契约描述'
 #     contract_appraise = '这是契约评价'
     url = readconfig.url_admin
-    listName = wait_confirm
+    listName = wait_appraise
     page = con.get_pages(url,listName)
-    con.operate_page(page)
+    con.operate_page()
     # con.add_finish_contract(companyName,contract_word,contract_appraise,url)
 #     con.confirm_ensure(url)
