@@ -74,6 +74,8 @@ all_list_page_num = (By.XPATH, ('/html/body/div[1]/div[2]/div/div/div[1]/div[2]/
 page_tag1 = (By.XPATH,'/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div[2]/div/div[1]/nav/ul')
 page_tag2 = 'a'
 
+next_btn = (By.CSS_SELECTOR,'li.null:nth-child(7) > a:nth-child(1)')    # 下一页按钮
+
 class Add_Contract(BasePage):
     # 点击侧边栏我的契约
     def contract_list(self):
@@ -203,10 +205,11 @@ class Add_Contract(BasePage):
     # 选择列表
     def select_list(self,url,listName):
         self.keep_login_cookie(url)
-        sleep(3)
+        sleep(2)
         self.contract_list()
         sleep(2)
         self.click_btn(*listName)
+        sleep(2)
     # 选择待我确认列表
     def select_wait_confirm(self,url):
         self.select_list(url,wait_confirm)
@@ -336,10 +339,23 @@ class Add_Contract(BasePage):
     # 获取契约列表的总页数
     def get_pages(self,url,listName):
         self.select_list(url,listName)
-        self.ele_target()                   # 调用元素聚焦方法
-        total_pages = len(self.find_web_element(*page_tag1).find_elements_by_tag_name(page_tag2))       # 连续定位，第二个直接调用 find_web_elements 会报错，暂时只能直接使用定位方法
+        self.ele_target()    # 调用元素聚焦方法
+        page = self.find_web_element(*page_tag1)
+        total_pages = len(page.find_elements_by_tag_name(page_tag2))    # 连续定位，第二个直接调用 find_web_elements 会报错，暂时只能直接使用定位方法
         print(total_pages)
-        return total_pages
+        # return total_pages
+        # while 1:
+        #     for i in total_pages:
+        #         print(i)
+        #     if page.xpath(''):
+        #         break
+        #     else:
+        #         self.click_btn(*next_btn)
+        for i in range(1,5):
+            self.ele_target()
+            self.click_btn(*next_btn)
+            self.ele_target()
+            sleep(3)
     # 操作下一页
     def operate_page(self):
         pages = self.find_web_element(*page_tag1).find_elements_by_tag_name(page_tag2)
@@ -361,6 +377,6 @@ if __name__ == '__main__':
     url = readconfig.url_admin
     listName = wait_appraise
     page = con.get_pages(url,listName)
-    con.operate_page()
+    # con.operate_page()
     # con.add_finish_contract(companyName,contract_word,contract_appraise,url)
 #     con.confirm_ensure(url)
