@@ -1,6 +1,9 @@
 # coding:utf-8
 from time import sleep
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium import webdriver
+
 class BasePage(object):
     def __init__(self,driver):
         self.driver = driver
@@ -72,11 +75,13 @@ class BasePage(object):
         return self.driver.find_element(*loc).send_keys(files)     # 对input进行send_keys（） 不需要再去操作点击上传按钮，会导致多余的选择文件弹框出现
 #获取当前的浏览器窗口
     def get_handle(self):
+        print(self.driver.current_window_handle)
         return self.driver.current_window_handle
 # if __name__ == '__main__':
 #     url = 'http://qiyuebao-t.yunxitech.cn/'
 #     d = webdriver.Firefox()
 #     d.get(url)
 #     B = BasePage(d)
-#     ele = (By.XPATH,'/html/body/nav/div/div[2]/ul/li[2]/a')
-#     B.click_btn(*ele)
+    # ele = (By.XPATH,'/html/body/nav/div/div[2]/ul/li[2]/a')
+    # B.click_btn(*ele)
+    # B.get_handle()

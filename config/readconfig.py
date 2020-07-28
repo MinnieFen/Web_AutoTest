@@ -28,6 +28,8 @@ inputPhone_cookie = conf.get('user_info','inputPhone_cookie')
 inputPsw_cookie = conf.get('user_info','inputPsw_cookie')
 inputPhone_login = conf.get('user_info','inputPhone_login')
 inputPsw_login = conf.get('user_info','inputPsw_login')
+inputPhone_reset = conf.get('user_info','inputPhone_reset')
+inputPsw_reset = conf.get('user_info','inputPsw_reset')
 
 # 读取email
 mail_host = conf.get('email','mail_host')
