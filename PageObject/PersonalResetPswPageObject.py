@@ -6,11 +6,10 @@ from selenium import webdriver
 from config import readconfig
 from selenium.webdriver.common.by import By
 from public.SQLconnect import MySQLUtil
-from public.GetExcelData import get_excel_data
+
 
 
 mysql = MySQLUtil(db=readconfig.sql_db_qiyuebao)
-sqldata = get_excel_data('sql_data')
 
 reset_psw_list = (By.XPATH,'/html/body/div[1]/div[1]/div/nav/ul/li[7]/a/span')  # 侧边栏修改密码
 code_text = (By.XPATH,'//*[@id="verification-code"]')  # 验证码输入框
