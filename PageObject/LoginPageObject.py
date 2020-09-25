@@ -146,6 +146,15 @@ class Login(BasePage):
     def logout_userpage(self):
         self.click_btn(*user_name_btn_2)
         self.click_btn(*login_btn_2)
+    # 判断是否获取登录信息
+    def is_login_success(self):
+        try:
+            text = self.login_success_username()
+            print(text)
+            return True
+        except:
+            return False
+
 # if __name__ == '__main__':
 #     login = Login(driver=webdriver.Firefox())
 #     login.psw_login('18782038145','a123456','http://qiyuebao-t.yunxitech.cn/')

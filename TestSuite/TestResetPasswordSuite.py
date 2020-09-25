@@ -8,18 +8,29 @@ from public.GetToastText import ToastText
 url = readconfig.url_login
 resetdata = get_excel_data('reset_psw')
 sqldata = get_excel_data('sql_data')
-driverBase = DriverBase()
+driverbase = DriverBase()
 logindata = get_excel_data('psw_login')
 
 class Reset_password(unittest.TestCase):
-    def setUp(self):
-        self.driver = driverBase.open_broswer()
-        driverBase.max_window()
-        self.login = Login(self.driver)
-        self.driver.implicitly_wait(30)
-        self.toast = ToastText(self.driver)
-    def tearDown(self):
-        driverBase.quit_broswer()
+    # def setUp(self):
+    #     self.driver = driverbase.open_broswer()
+    #     driverBase.max_window()
+    #     self.login = Login(self.driver)
+    #     self.driver.implicitly_wait(30)
+    #     self.toast = ToastText(self.driver)
+    # def tearDown(self):
+    #     driverBase.quit_broswer()
+    # 启动一次浏览器，用例都执行完后，关闭浏览器
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = driverbase.open_broswer()
+        cls.driver.maximize_window()
+        cls.driver.implicitly_wait(30)
+        cls.login = Login(cls.driver)
+        cls.toast = ToastText(cls.driver)
+    @classmethod
+    def tearDownClass(cls):
+        driverbase.quit_broswer()
     # 修改密码成功
     def reset_success(self):
         '''密码修改成功'''
